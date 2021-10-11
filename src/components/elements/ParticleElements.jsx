@@ -1,19 +1,9 @@
 import Particles from 'react-tsparticles';
 
 const ParticleElements = () => {
-	// const particlesInit = (main) => {
-	// 	//
-	// };
-
-	// const particlesLoaded = (container) => {
-	// 	//
-	// };
-
 	return (
 		<Particles
 			id='tsparticles'
-			// init={particlesInit}
-			// loaded={particlesLoaded}
 			options={{
 				background: {
 					color: {

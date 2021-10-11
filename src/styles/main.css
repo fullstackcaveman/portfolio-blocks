@@ -346,6 +346,10 @@ body {
   box-sizing: border-box;
 }
 
+.accent {
+  color: #ffb400;
+}
+
 .main-container {
   display: flex;
   height: 100vh;
@@ -358,6 +362,9 @@ body {
   width: 30%;
   margin: 20px 10px 20px 20px;
   background-color: black;
+}
+.main-container .portfolio-pic:hover {
+  cursor: pointer;
 }
 .main-container .portfolio-pic #tsparticles {
   height: 100%;
@@ -396,6 +403,16 @@ body {
   width: 50%;
   background-color: #222;
 }
+.main-container .content-area .blocks .top-row .block-1 h2,
+.main-container .content-area .blocks .top-row .block-2 h2,
+.main-container .content-area .blocks .top-row .block-3 h2,
+.main-container .content-area .blocks .top-row .block-4 h2,
+.main-container .content-area .blocks .bottom-row .block-1 h2,
+.main-container .content-area .blocks .bottom-row .block-2 h2,
+.main-container .content-area .blocks .bottom-row .block-3 h2,
+.main-container .content-area .blocks .bottom-row .block-4 h2 {
+  font-size: 30px;
+}
 .main-container .content-area .blocks .top-row .block-1 .accent,
 .main-container .content-area .blocks .top-row .block-2 .accent,
 .main-container .content-area .blocks .top-row .block-3 .accent,
@@ -432,9 +449,24 @@ body {
 }
 .main-container .content-area .blocks .top-row .block-2 {
   margin-left: 10px;
+  transition: all 0.5s ease-in-out;
 }
-.main-container .content-area .blocks .top-row .block-2:hover span :first-child {
-  transform: translate3d(0, -105%, 0);
+.main-container .content-area .blocks .top-row .block-2 h2 .accent {
+  transition: all 0.3s ease-in-out;
+  color: #ffb400;
+}
+.main-container .content-area .blocks .top-row .block-2 h2 .white {
+  transition: all 0.3s ease-in-out;
+  color: #efe9e9;
+}
+.main-container .content-area .blocks .top-row .block-2:hover {
+  border: 1px solid #ffb30023;
+}
+.main-container .content-area .blocks .top-row .block-2:hover h2 .accent {
+  color: #efe9e9;
+}
+.main-container .content-area .blocks .top-row .block-2:hover h2 .white {
+  color: #ffb400;
 }
 .main-container .content-area .blocks .bottom-row {
   margin-top: 10px;
@@ -442,8 +474,132 @@ body {
 .main-container .content-area .blocks .bottom-row .block-3 {
   margin-right: 10px;
 }
+.main-container .content-area .blocks .bottom-row .block-3 h2 .accent {
+  transition: all 0.3s ease-in-out;
+  color: #ffb400;
+}
+.main-container .content-area .blocks .bottom-row .block-3 h2 .white {
+  transition: all 0.3s ease-in-out;
+  color: #efe9e9;
+}
+.main-container .content-area .blocks .bottom-row .block-3:hover h2 .accent {
+  color: #efe9e9;
+}
+.main-container .content-area .blocks .bottom-row .block-3:hover h2 .white {
+  color: #ffb400;
+}
 .main-container .content-area .blocks .bottom-row .block-4 {
   margin-left: 10px;
+}
+.main-container .content-area .blocks .bottom-row .block-4 h2 .accent {
+  transition: all 0.3s ease-in-out;
+  color: #ffb400;
+}
+.main-container .content-area .blocks .bottom-row .block-4 h2 .white {
+  transition: all 0.3s ease-in-out;
+  color: #efe9e9;
+}
+.main-container .content-area .blocks .bottom-row .block-4:hover h2 .accent {
+  color: #efe9e9;
+}
+.main-container .content-area .blocks .bottom-row .block-4:hover h2 .white {
+  color: #ffb400;
+}
+.main-container .content-area .about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+.main-container .content-area .about-section .close-icon {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  color: #ffb400;
+  font-size: 50px;
+}
+.main-container .content-area .about-section .close-icon:hover {
+  cursor: pointer;
+}
+.main-container .content-area .about-section .page-title {
+  margin-bottom: 20px;
+}
+.main-container .content-area .about-section .page-title h2 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+.main-container .content-area .about-section .info-section .divider span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-container .content-area .about-section .info-section .divider .v-card {
+  font-size: 20px;
+  margin: 0 20px;
+  color: #ffb400;
+}
+.main-container .content-area .about-section .info-section .divider .outer-line {
+  width: 25%;
+  border-bottom: 1px solid #efe9e9;
+}
+.main-container .content-area .about-section .info-section .personal-info h6 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.main-container .content-area .about-section .info-section .personal-info h6 .person-icon {
+  color: #ffb400;
+  font-size: 15px;
+  margin-right: 10px;
+}
+.main-container .content-area .about-section .info-section .personal-info .description {
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 2;
+}
+.main-container .content-area .about-section .info-section .split-section {
+  display: flex;
+}
+.main-container .content-area .about-section .info-section .split-section .contact {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+  width: 50%;
+}
+.main-container .content-area .about-section .info-section .split-section .contact li {
+  padding-bottom: 5px;
+  line-height: 1.4;
+}
+.main-container .content-area .about-section .info-section .split-section .contact li .bold {
+  font-weight: bold;
+}
+.main-container .content-area .about-section .info-section .split-section .contact li a {
+  color: #ffb400;
+}
+.main-container .content-area .about-section .info-section .split-section .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 50%;
+}
+.main-container .content-area .about-section .info-section .split-section .buttons .resume-btn {
+  align-items: center;
+  color: #efe9e9;
+  background-color: #ffb400;
+  margin: 10px 0;
+}
+.main-container .content-area .about-section .info-section .split-section .buttons .resume-btn .btn-icon {
+  font-weight: bold;
+}
+.main-container .content-area .about-section .info-section .split-section .buttons .blog-btn {
+  color: #ffb400;
+  background-color: transparent;
+  border: 1px solid #ffb400;
+  margin: 10px 0;
+}
+.main-container .content-area .about-section .info-section .split-section .buttons .blog-btn .btn-icon {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=main.css.map */

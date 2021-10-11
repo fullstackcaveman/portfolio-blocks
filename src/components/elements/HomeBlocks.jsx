@@ -1,21 +1,41 @@
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Block1 from './Block1';
 
 const HomeBlocks = () => {
+	const pageVariants = {
+		in: {
+			opacity: 1,
+			x: 0,
+		},
+		out: {
+			opacity: 0,
+			x: '-100vw',
+		},
+	};
+
+	const pageTransitions = {
+		type: 'spring',
+		stiffness: 60,
+	};
+
 	return (
-		<div className='blocks'>
+		<motion.div
+			exit='out'
+			animate='in'
+			initial='out'
+			variants={pageVariants}
+			transition={pageTransitions}
+			className='blocks'
+		>
 			<div className='top-row'>
 				<div className='block-1'>
 					<Block1 />
 				</div>
 				<Link to='/about' className='block-2'>
 					<h2>
-						<span className='white' data-hover='ABOUT'>
-							ABOUT
-						</span>{' '}
-						<span className='accent' data-hover='ME'>
-							ME
-						</span>
+						<span className='white'>ABOUT</span>{' '}
+						<span className='accent'>ME</span>
 					</h2>
 				</Link>
 			</div>
@@ -33,7 +53,7 @@ const HomeBlocks = () => {
 					</h2>
 				</Link>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

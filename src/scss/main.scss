@@ -12,6 +12,10 @@ body {
 	box-sizing: border-box;
 }
 
+.accent {
+	color: $accent-color;
+}
+
 .main-container {
 	display: flex;
 	height: 100vh;
@@ -24,6 +28,10 @@ body {
 		width: 30%;
 		margin: 20px 10px 20px 20px;
 		background-color: black;
+
+		&:hover {
+			cursor: pointer;
+		}
 
 		#tsparticles {
 			height: 100%;
@@ -58,8 +66,11 @@ body {
 					align-items: center;
 					text-align: center;
 					width: 50%;
-					// width: 615px;
 					background-color: $med-grey;
+
+					h2 {
+						font-size: 30px;
+					}
 
 					.accent {
 						color: $accent-color;
@@ -87,34 +98,36 @@ body {
 						color: $accent-color;
 					}
 				}
+
 				.block-2 {
 					margin-left: 10px;
+					transition: all 0.5s ease-in-out;
 
-					&:hover {
-						span {
-							:first-child {
-								transform: translate3d(0, -105%, 0);
-							}
+					h2 {
+						.accent {
+							transition: all 0.3s ease-in-out;
+							color: $accent-color;
+						}
+
+						.white {
+							transition: all 0.3s ease-in-out;
+							color: $main-font-color;
 						}
 					}
 
-					// &:hover {
-					// 	h2 {
-					// 		span {
-					// 			:first-child {
-					// 				transform: translate3d(0, -105%, 0);
-					// 			}
-					// 		}
-					// 		&:hover {
-					// 			.accent {
-					// 				color: $main-font-color;
-					// 			}
-					// 			.white {
-					// 				color: $accent-color;
-					// 			}
-					// 		}
-					// 	}
-					// }
+					&:hover {
+						border: 1px solid #ffb30023;
+
+						h2 {
+							.accent {
+								color: $main-font-color;
+							}
+
+							.white {
+								color: $accent-color;
+							}
+						}
+					}
 				}
 			}
 
@@ -123,9 +136,183 @@ body {
 
 				.block-3 {
 					margin-right: 10px;
+					h2 {
+						.accent {
+							transition: all 0.3s ease-in-out;
+							color: $accent-color;
+						}
+
+						.white {
+							transition: all 0.3s ease-in-out;
+							color: $main-font-color;
+						}
+					}
+
+					&:hover {
+						h2 {
+							.accent {
+								color: $main-font-color;
+							}
+
+							.white {
+								color: $accent-color;
+							}
+						}
+					}
 				}
 				.block-4 {
 					margin-left: 10px;
+					h2 {
+						.accent {
+							transition: all 0.3s ease-in-out;
+							color: $accent-color;
+						}
+
+						.white {
+							transition: all 0.3s ease-in-out;
+							color: $main-font-color;
+						}
+					}
+
+					&:hover {
+						h2 {
+							.accent {
+								color: $main-font-color;
+							}
+
+							.white {
+								color: $accent-color;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.about-section {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			height: 100%;
+
+			.close-icon {
+				position: fixed;
+				top: 0px;
+				right: 0px;
+				color: $accent-color;
+				font-size: 50px;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+
+			.page-title {
+				margin-bottom: 20px;
+				h2 {
+					font-size: 50px;
+					font-weight: bolder;
+				}
+			}
+
+			.info-section {
+				.divider {
+					span {
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					.v-card {
+						font-size: 20px;
+						margin: 0 20px;
+						color: $accent-color;
+					}
+
+					.outer-line {
+						width: 25%;
+						border-bottom: 1px solid $main-font-color;
+					}
+				}
+
+				.personal-info {
+					h6 {
+						font-size: 20px;
+						margin-bottom: 12px;
+
+						.person-icon {
+							color: $accent-color;
+							font-size: 15px;
+							margin-right: 10px;
+						}
+					}
+
+					.description {
+						font-size: 15px;
+						font-weight: lighter;
+						line-height: 2;
+					}
+				}
+
+				.split-section {
+					display: flex;
+
+					.contact {
+						list-style: none;
+						padding: 0;
+						font-size: 15px;
+						width: 50%;
+
+						li {
+							padding-bottom: 5px;
+							line-height: 1.4;
+
+							.bold {
+								font-weight: bold;
+							}
+
+							a {
+								color: $accent-color;
+							}
+						}
+					}
+
+					.buttons {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						text-align: center;
+						justify-content: center;
+						width: 50%;
+
+						.resume-btn {
+							align-items: center;
+							color: $main-font-color;
+							background-color: $accent-color;
+							margin: 10px 0;
+							// font-size: 18px;
+
+							.btn-icon {
+								// font-size: 15px;
+								font-weight: bold;
+								// margin-left: 10px;
+							}
+						}
+
+						.blog-btn {
+							// font-size: 18px;
+							color: $accent-color;
+							background-color: transparent;
+							border: 1px solid $accent-color;
+							margin: 10px 0;
+
+							.btn-icon {
+								// font-size: 15px;
+								font-weight: bold;
+								// margin-left: 10px;
+							}
+						}
+					}
 				}
 			}
 		}
