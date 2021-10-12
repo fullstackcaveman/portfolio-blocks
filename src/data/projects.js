@@ -1,0 +1,45 @@
+export const projects = [
+	{
+		projectName: 'Asylum Case Database App',
+		client: 'Human Rights First',
+		description: '',
+		techStack: ['React', 'Node', 'Express', 'PostGres', 'Ant Design', 'Less'],
+		gitHubLinks: [
+			'https://github.com/fullstackcaveman/human-rights-first-asylum-fe-a',
+			'https://github.com/fullstackcaveman/human-rights-first-asylum-be-a',
+		],
+		deployedLink: 'none',
+	},
+	{
+		projectName: 'Star Wars Database',
+		client: 'Personal Project',
+		description: '',
+		techStack: [
+			'React',
+			'Node',
+			'Express',
+			'MongoDB',
+			'MaterialUI',
+			'SASS',
+			'Heroku',
+		],
+		gitHubLinks: ['https://github.com/fullstackcaveman/star-wars-universe'],
+		deployedLink: 'http://starwars.fullstackcaveman.com/',
+	},
+	{
+		projectName: 'Spacetagram',
+		client: 'Personal Project',
+		description: '',
+		techStack: ['React', 'Semantic-UI-React', 'SASS', 'Netlify'],
+		gitHubLinks: ['https://github.com/fullstackcaveman/nasa-photo-otd-sf'],
+		deployedLink: 'https://nasa-potd.fullstackcaveman.com/',
+	},
+	{
+		projectName: 'Portfolio Website',
+		client: 'Personal Project',
+		description: '',
+		techStack: ['React', 'Semantic-UI-React', 'SASS'],
+		gitHubLinks: ['https://github.com/fullstackcaveman/portfolio-blocks'],
+		deployedLink: 'https://fullstackcaveman.com/',
+	},
+];

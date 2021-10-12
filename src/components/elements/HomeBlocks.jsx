@@ -1,31 +1,19 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Block1 from './Block1';
+import {
+	homeBlocksVariants,
+	homeBlockTransitions,
+} from '../../animation/MotionSettings';
 
 const HomeBlocks = () => {
-	const pageVariants = {
-		in: {
-			opacity: 1,
-			x: 0,
-		},
-		out: {
-			opacity: 0,
-			x: '-100vw',
-		},
-	};
-
-	const pageTransitions = {
-		type: 'spring',
-		stiffness: 60,
-	};
-
 	return (
 		<motion.div
 			exit='out'
 			animate='in'
 			initial='out'
-			variants={pageVariants}
-			transition={pageTransitions}
+			variants={homeBlocksVariants}
+			transition={homeBlockTransitions}
 			className='blocks'
 		>
 			<div className='top-row'>

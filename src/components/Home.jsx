@@ -1,7 +1,7 @@
 import { Switch, Route, useLocation } from 'react-router-dom';
 import HomeBlocks from './elements/HomeBlocks';
 import PortfolioPic from './elements/PortfolioPic';
-import About from './elements/About';
+import About from './About';
 
 import { AnimatePresence } from 'framer-motion';
 

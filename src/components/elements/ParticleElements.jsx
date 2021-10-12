@@ -130,6 +130,11 @@ const ParticleElements = () => {
 								height: 100,
 								width: 100,
 							},
+							{
+								src: '/images/fullstackcaveman.png',
+								height: 100,
+								width: 100,
+							},
 						],
 					},
 					size: {

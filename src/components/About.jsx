@@ -7,26 +7,13 @@ import { BsPersonBoundingBox } from 'react-icons/bs';
 import { ImFilePdf } from 'react-icons/im';
 import { FaRegEdit } from 'react-icons/fa';
 import { Button } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import {
+	aboutPageTransitions,
+	aboutPageVariants,
+} from '../animation/MotionSettings';
 
 const About = () => {
 	const history = useHistory();
-
-	const pageVariants = {
-		in: {
-			opacity: 1,
-			x: 0,
-		},
-		out: {
-			opacity: 0,
-			x: '100vw',
-		},
-	};
-
-	const pageTransitions = {
-		type: 'spring',
-		stiffness: 60,
-	};
 
 	const handleClose = () => {
 		history.push('/');
@@ -36,16 +23,14 @@ const About = () => {
 		document.title = 'About The FullStackCaveman';
 	}, []);
 
-	const handleBlog = () => {};
-
 	return (
 		<motion.section
 			className='about-section'
 			exit='out'
 			animate='in'
 			initial='out'
-			variants={pageVariants}
-			transition={pageTransitions}
+			variants={aboutPageVariants}
+			transition={aboutPageTransitions}
 		>
 			<div className='close-icon' onClick={handleClose}>
 				<AiOutlineCloseCircle />
@@ -72,9 +57,10 @@ const About = () => {
 						PERSONAL INFO
 					</h6>
 					<p className='description'>
-						I'm a Web & Software Developer based in Great Falls, MT. I have
+						I'm a Web & Software Developer based in Great Falls, MT. I have a
 						serious passion for UI effects, animations and creating intuitive
-						websites and software.
+						websites and software. I am comfortable working anywhere in the
+						stack whether it be front-end or back-end or moving between the two.
 					</p>
 
 					<div className='split-section'>

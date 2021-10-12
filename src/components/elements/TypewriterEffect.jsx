@@ -4,7 +4,13 @@ const TypewriterEffect = () => {
 	return (
 		<Typewriter
 			options={{
-				strings: ['WEB DEVELOPER', 'SOFTWARE DEVELOPER', 'FULLSTACKCAVEMAN'],
+				strings: [
+					'WEB DEVELOPER',
+					'SOFTWARE DEVELOPER',
+					'FRONT END',
+					'BACK END',
+					'THE "FULLSTACKCAVEMAN"',
+				],
 				autoStart: true,
 				loop: true,
 			}}
