@@ -7,8 +7,8 @@ const TypewriterEffect = () => {
 				strings: [
 					'WEB DEVELOPER',
 					'SOFTWARE DEVELOPER',
-					'FRONT END',
-					'BACK END',
+					'FRONT-END DEVELOPER',
+					'BACK-END DEVELOPER',
 					'THE "FULLSTACKCAVEMAN"',
 				],
 				autoStart: true,

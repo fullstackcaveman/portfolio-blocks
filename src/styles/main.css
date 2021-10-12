@@ -601,10 +601,16 @@ body {
   background-color: #ffb400;
   margin: 10px 0;
   width: 250px;
+  border: 1px solid #111;
 }
 .main-container .content-area .about-section .info-section .split-section .buttons .resume-btn .btn-icon {
   font-weight: bold;
   margin-left: 10px;
+}
+.main-container .content-area .about-section .info-section .split-section .buttons .resume-btn:hover {
+  background-color: #111;
+  color: #ffb400;
+  border: 1px solid #ffb400;
 }
 .main-container .content-area .about-section .info-section .split-section .buttons .blog-btn {
   display: flex;
@@ -619,6 +625,10 @@ body {
 .main-container .content-area .about-section .info-section .split-section .buttons .blog-btn .btn-icon {
   font-weight: bold;
   margin-left: 10px;
+}
+.main-container .content-area .about-section .info-section .split-section .buttons .blog-btn:hover {
+  background-color: #ffb400;
+  color: #111;
 }
 
 /*# sourceMappingURL=main.css.map */
