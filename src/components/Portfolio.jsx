@@ -7,10 +7,9 @@ import {
 	portfolioPageVariants,
 	portfolioPageTransitions,
 } from '../animation/MotionSettings';
-
 import { projects } from '../data/projects';
 import ProjectCard from './elements/ProjectCard';
-import { Link } from 'react-router-dom';
+
 import { Image } from 'semantic-ui-react';
 
 const Portfolio = () => {

@@ -380,7 +380,6 @@ body {
   flex-direction: column;
   font-size: 1.8rem;
   width: 100%;
-  height: 100%;
 }
 .main-container .content-area .blocks .top-row,
 .main-container .content-area .blocks .bottom-row {
@@ -520,7 +519,7 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 100%;
+  margin: auto;
 }
 .main-container .content-area .about-section .close-icon {
   transition: all 0.3s ease-in-out;
@@ -637,6 +636,7 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  margin: auto;
 }
 .main-container .content-area .portfolio-section .close-icon {
   transition: all 0.3s ease-in-out;
