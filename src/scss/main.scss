@@ -39,6 +39,9 @@ body {
 	}
 
 	.content-area {
+		display: flex;
+		justify-content: center;
+
 		width: 70%;
 		margin: 20px 20px 20px 10px;
 
@@ -337,6 +340,71 @@ body {
 								background-color: $accent-color;
 								color: $dark-grey;
 							}
+						}
+					}
+				}
+			}
+		}
+
+		.portfolio-section {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+
+			.close-icon {
+				transition: all 0.3s ease-in-out;
+				position: fixed;
+				top: 0px;
+				right: 0px;
+				color: $accent-color;
+				font-size: 50px;
+
+				&:hover {
+					cursor: pointer;
+					transform: rotate(360deg);
+				}
+			}
+
+			.page-title {
+				margin-bottom: 20px;
+				h2 {
+					font-size: 50px;
+					font-weight: bolder;
+				}
+			}
+
+			.info-section {
+				.divider {
+					span {
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					.v-card {
+						font-size: 30px;
+						margin: 0 20px;
+						color: $accent-color;
+					}
+
+					.outer-line {
+						width: 25%;
+						border-bottom: 1px solid $main-font-color;
+					}
+				}
+
+				.projects-info {
+					.projects {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						align-items: center;
+						text-align: center;
+						margin-top: 20px;
+
+						.project-block {
+							margin: 10px;
+							border: 1px solid $accent-color;
 						}
 					}
 				}
