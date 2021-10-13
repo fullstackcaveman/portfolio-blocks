@@ -25,7 +25,7 @@ export const projects = [
 		id: 2,
 		projectName: 'Star Wars Universe',
 		client: 'Personal Project',
-		description: '',
+		description: 'Browsable database of the Star Wars Universe.',
 		thumbnail:
 			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634068527/Star%20Wars%20Universe/starwars_thumb_1280x900_mxlhuo.png',
 		techStack: [
@@ -44,7 +44,8 @@ export const projects = [
 		id: 3,
 		projectName: 'Spacetagram',
 		client: 'Personal Project',
-		description: '',
+		description:
+			'Spacetagram is a picture of the day app that fetches the Nasa Picture of the Day from their APOD API. Users can browse pictures by date, like and share pictures using an easy-to-use UI.',
 		thumbnail:
 			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634068540/Spacetagram/spacetagram_thumb_1280x900_p7vqk7.png',
 		techStack: ['React,', 'Semantic-UI-React,', 'SASS,', 'Netlify'],
