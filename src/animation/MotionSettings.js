@@ -61,3 +61,19 @@ export const projectPageTransitions = {
 	type: 'spring',
 	stiffness: 60,
 };
+
+export const contactPageVariants = {
+	in: {
+		opacity: 1,
+		x: 0,
+	},
+	out: {
+		opacity: 0,
+		x: '100vw',
+	},
+};
+
+export const contactPageTransitions = {
+	type: 'spring',
+	stiffness: 60,
+};

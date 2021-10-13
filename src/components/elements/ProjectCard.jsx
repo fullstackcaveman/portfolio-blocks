@@ -1,13 +1,12 @@
-import { motion } from 'framer-motion';
 import { useEffect } from 'react';
-import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { useHistory } from 'react-router';
+import { motion } from 'framer-motion';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { Button, Divider, Icon, Image } from 'semantic-ui-react';
 import {
 	projectPageVariants,
 	projectPageTransitions,
 } from '../../animation/motionSettings';
-import { BiLinkExternal } from 'react-icons/bi';
 
 const ProjectCard = ({ project }) => {
 	const history = useHistory();

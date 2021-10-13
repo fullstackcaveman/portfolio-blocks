@@ -813,5 +813,186 @@ body {
 .main-container .content-area .project-section .buttons a button .btn-icon {
   margin-left: 10px;
 }
+.main-container .content-area .contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  padding: 20px;
+}
+.main-container .content-area .contact-section .close-icon {
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  color: #ffb400;
+  font-size: 50px;
+}
+.main-container .content-area .contact-section .close-icon:hover {
+  cursor: pointer;
+  transform: rotate(360deg);
+}
+.main-container .content-area .contact-section .page-title {
+  margin-bottom: 20px;
+}
+.main-container .content-area .contact-section .page-title h2 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+.main-container .content-area .contact-section .info-section .divider {
+  margin-bottom: 20px;
+}
+.main-container .content-area .contact-section .info-section .divider span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-container .content-area .contact-section .info-section .divider .v-card {
+  font-size: 30px;
+  margin: 0 20px;
+  color: #ffb400;
+}
+.main-container .content-area .contact-section .info-section .divider .outer-line {
+  width: 25%;
+  border-bottom: 1px solid #efe9e9;
+}
+.main-container .content-area .contact-section .info-section .personal-info h6 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.main-container .content-area .contact-section .info-section .personal-info h6 .person-icon {
+  color: #ffb400;
+  font-size: 22px;
+  margin-right: 10px;
+}
+.main-container .content-area .contact-section .info-section .personal-info .description {
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 2;
+}
+.main-container .content-area .contact-section .info-section .split-section {
+  display: flex;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+  width: 50%;
+  background-color: #222;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ffb400;
+  border-radius: 3px;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 .socials a {
+  margin: 0 5px;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 .socials a .dev {
+  border: 1px solid #ffb400;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 li {
+  padding-bottom: 5px;
+  line-height: 1.4;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 li .bold {
+  font-weight: bold;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 li a {
+  color: #ffb400;
+}
+.main-container .content-area .contact-section .info-section .split-section .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+}
+.main-container .content-area .contact-section .info-section .split-section .form .note {
+  width: 100%;
+}
+.main-container .content-area .contact-section .info-section .split-section .form .note h6 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+.main-container .content-area .contact-section .info-section .split-section .form .form-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.main-container .content-area .contact-section .info-section .split-section .form .form-fields .name,
+.main-container .content-area .contact-section .info-section .split-section .form .form-fields .email,
+.main-container .content-area .contact-section .info-section .split-section .form .form-fields .text-area {
+  display: flex;
+  width: 100%;
+  margin: 5px auto;
+}
+.main-container .content-area .contact-section .info-section .split-section .form .form-fields .name .MuiFilledInput-root,
+.main-container .content-area .contact-section .info-section .split-section .form .form-fields .name label,
+.main-container .content-area .contact-section .info-section .split-section .form .form-fields .email .MuiFilledInput-root,
+.main-container .content-area .contact-section .info-section .split-section .form .form-fields .email label,
+.main-container .content-area .contact-section .info-section .split-section .form .form-fields .text-area .MuiFilledInput-root,
+.main-container .content-area .contact-section .info-section .split-section .form .form-fields .text-area label {
+  color: #efe9e9;
+}
+.main-container .content-area .contact-section .info-section .split-section .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 50%;
+}
+.main-container .content-area .contact-section .info-section .split-section .buttons .resume-btn {
+  display: flex;
+  justify-content: center;
+  align-items: middle;
+  color: #111;
+  background-color: #ffb400;
+  margin: 10px 0;
+  width: 250px;
+  border: 1px solid #111;
+}
+.main-container .content-area .contact-section .info-section .split-section .buttons .resume-btn .btn-icon {
+  font-weight: bold;
+  margin-left: 10px;
+}
+.main-container .content-area .contact-section .info-section .split-section .buttons .resume-btn:hover {
+  background-color: #111;
+  color: #ffb400;
+  border: 1px solid #ffb400;
+}
+.main-container .content-area .contact-section .info-section .split-section .buttons .blog-btn {
+  display: flex;
+  justify-content: center;
+  align-items: middle;
+  color: #ffb400;
+  background-color: transparent;
+  border: 1px solid #ffb400;
+  margin: 10px 0;
+  width: 250px;
+}
+.main-container .content-area .contact-section .info-section .split-section .buttons .blog-btn .btn-icon {
+  font-weight: bold;
+  margin-left: 10px;
+}
+.main-container .content-area .contact-section .info-section .split-section .buttons .blog-btn:hover {
+  background-color: #ffb400;
+  color: #111;
+}
 
 /*# sourceMappingURL=main.css.map */

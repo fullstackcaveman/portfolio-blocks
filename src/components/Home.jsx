@@ -8,12 +8,12 @@ import Portfolio from './Portfolio';
 
 import { projects } from '../data/projects';
 import ProjectCard from './elements/ProjectCard';
+import Contact from './Contact';
 
 const Home = () => {
 	const location = useLocation();
 
 	const setProject = () => {
-		console.log(window.location.pathname);
 		const projectCall = [];
 
 		// eslint-disable-next-line
@@ -40,6 +40,7 @@ const Home = () => {
 						<Route exact path='/' component={HomeBlocks} />
 						<Route path='/about' component={About} />
 						<Route path='/portfolio' component={Portfolio} />
+						<Route path='/contact' component={Contact} />
 						<Route path='/projects/:id'>{setProject()}</Route>
 					</Switch>
 				</AnimatePresence>
