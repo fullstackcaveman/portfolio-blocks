@@ -43,6 +43,7 @@ body {
 		// justify-content: center;
 		width: 70%;
 		margin: 20px 20px 20px 10px;
+		position: absolute;
 
 		.blocks {
 			display: flex;
@@ -200,6 +201,7 @@ body {
 		}
 
 		.about-section {
+			position: absolute;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -346,6 +348,7 @@ body {
 		}
 
 		.portfolio-section {
+			position: absolute;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -482,6 +485,7 @@ body {
 		}
 
 		.project-section {
+			position: absolute;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -569,6 +573,7 @@ body {
 		}
 
 		.contact-section {
+			position: absolute;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;

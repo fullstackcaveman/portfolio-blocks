@@ -34,8 +34,11 @@ const Home = () => {
 			<div className='portfolio-pic'>
 				<PortfolioPic />
 			</div>
-			<div className='content-area' style={{ overflowX: 'hidden' }}>
-				<AnimatePresence exitBeforeEnter>
+			<div
+				className='content-area'
+				style={{ overflowX: 'hidden', position: 'relative' }}
+			>
+				<AnimatePresence>
 					<Switch location={location} key={location.pathname}>
 						<Route exact path='/' component={HomeBlocks} />
 						<Route path='/about' component={About} />
