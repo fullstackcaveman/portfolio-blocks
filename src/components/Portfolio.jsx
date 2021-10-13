@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import { FaIdCard } from 'react-icons/fa';
+import { BsFillBriefcaseFill } from 'react-icons/bs';
 import {
 	portfolioPageVariants,
 	portfolioPageTransitions,
@@ -15,10 +15,12 @@ import { Image } from 'semantic-ui-react';
 const Portfolio = () => {
 	const history = useHistory();
 
-	console.log(projects);
-
 	const handleClose = () => {
 		history.push('/');
+	};
+
+	const handleClick = (id) => {
+		console.log('clicked', id);
 	};
 
 	useEffect(() => {
@@ -46,7 +48,7 @@ const Portfolio = () => {
 				<div className='divider'>
 					<span className='outer-line'></span>
 					<span className='v-card'>
-						<FaIdCard />
+						<BsFillBriefcaseFill />
 					</span>
 					<span className='outer-line'></span>
 				</div>
@@ -55,8 +57,19 @@ const Portfolio = () => {
 					<div className='projects'>
 						{projects.map((project) => {
 							return (
-								<div key={project.id} className='project-block'>
-									<Image src={project.thumbnail} size='large' fluid />
+								<div
+									key={project.id}
+									className='project'
+									onClick={() => handleClick(project.id)}
+								>
+									<div className='project-image'>
+										<Image src={project.thumbnail} size='large' />
+									</div>
+									<span className='project-name-wrap'>
+										<div className='project-name'>
+											{project.projectName.toUpperCase()}
+										</div>
+									</span>
 								</div>
 							);
 						})}

@@ -371,7 +371,6 @@ body {
 }
 .main-container .content-area {
   display: flex;
-  justify-content: center;
   width: 70%;
   margin: 20px 20px 20px 10px;
 }
@@ -678,9 +677,66 @@ body {
   text-align: center;
   margin-top: 20px;
 }
-.main-container .content-area .portfolio-section .info-section .projects-info .projects .project-block {
+.main-container .content-area .portfolio-section .info-section .projects-info .projects .project {
+  position: relative;
+  background: #ffb400;
   margin: 10px;
   border: 1px solid #ffb400;
+  overflow: hidden;
+  cursor: pointer;
+}
+.main-container .content-area .portfolio-section .info-section .projects-info .projects .project::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
+  transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.main-container .content-area .portfolio-section .info-section .projects-info .projects .project:hover:after {
+  transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
+}
+.main-container .content-area .portfolio-section .info-section .projects-info .projects .project:hover .project-image {
+  transform: scale(1.2);
+}
+.main-container .content-area .portfolio-section .info-section .projects-info .projects .project:hover .project-name {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 100;
+}
+.main-container .content-area .portfolio-section .info-section .projects-info .projects .project-image {
+  height: auto;
+  transform: translateZ(0);
+  display: block;
+  transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+}
+.main-container .content-area .portfolio-section .info-section .projects-info .projects .project-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  text-align: center;
+  color: #efe9e9;
+  font-size: 1.8rem;
+  font-weight: bold;
+  transform: translateY(-20%);
+  transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1), transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
+  transition-delay: 300ms;
+}
+.main-container .content-area .portfolio-section .info-section .projects-info .projects .project-name-wrap {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
+  z-index: 100;
 }
 
 /*# sourceMappingURL=main.css.map */

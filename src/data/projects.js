@@ -1,8 +1,6 @@
-import { v4 as projectId } from 'uuid';
-
 export const projects = [
 	{
-		id: projectId(),
+		id: 1,
 		projectName: 'Asylum Case Database App',
 		client: 'Human Rights First',
 		description: '',
@@ -16,8 +14,8 @@ export const projects = [
 		deployedLink: 'none',
 	},
 	{
-		id: projectId(),
-		projectName: 'Star Wars Database',
+		id: 2,
+		projectName: 'Star Wars Universe',
 		client: 'Personal Project',
 		description: '',
 		thumbnail:
@@ -35,7 +33,7 @@ export const projects = [
 		deployedLink: 'http://starwars.fullstackcaveman.com/',
 	},
 	{
-		id: projectId(),
+		id: 3,
 		projectName: 'Spacetagram',
 		client: 'Personal Project',
 		description: '',
@@ -46,7 +44,7 @@ export const projects = [
 		deployedLink: 'https://nasa-potd.fullstackcaveman.com/',
 	},
 	{
-		id: projectId(),
+		id: 4,
 		projectName: 'Portfolio Website',
 		client: 'Personal Project',
 		description: '',
