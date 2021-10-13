@@ -5,9 +5,9 @@ const Block1 = () => {
 		<div>
 			<p>HI THERE! I'M</p>
 			<h1 className='name'>CHRIS BURTON</h1>
-			<p className='typewriter'>
+			<div className='typewriter'>
 				<TypewriterEffect />
-			</p>
+			</div>
 		</div>
 	);
 };

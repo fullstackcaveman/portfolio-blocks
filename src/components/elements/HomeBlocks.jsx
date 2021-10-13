@@ -4,9 +4,14 @@ import Block1 from './Block1';
 import {
 	homeBlocksVariants,
 	homeBlockTransitions,
-} from '../../animation/MotionSettings';
+} from '../../animation/motionSettings';
+import { useEffect } from 'react';
 
 const HomeBlocks = () => {
+	useEffect(() => {
+		document.title = 'FullStackCaveman';
+	}, []);
+
 	return (
 		<motion.div
 			exit='out'

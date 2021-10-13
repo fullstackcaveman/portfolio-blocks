@@ -6,9 +6,9 @@ import { BsFillBriefcaseFill } from 'react-icons/bs';
 import {
 	portfolioPageVariants,
 	portfolioPageTransitions,
-} from '../animation/MotionSettings';
+} from '../animation/motionSettings';
 import { projects } from '../data/projects';
-import ProjectCard from './elements/ProjectCard';
+// import ProjectCard from './elements/ProjectCard';
 
 import { Image } from 'semantic-ui-react';
 
@@ -19,12 +19,14 @@ const Portfolio = () => {
 		history.push('/');
 	};
 
-	const handleClick = (id) => {
-		console.log('clicked', id);
+	const handleClick = (project) => {
+		const projectUrl = project.replaceAll(' ', '-').toLowerCase();
+
+		history.push(`/projects/${projectUrl}`);
 	};
 
 	useEffect(() => {
-		document.title = 'The FullStackCaveman Portfolio';
+		document.title = 'FullStackCaveman | Portfolio';
 	}, []);
 
 	return (
@@ -60,7 +62,7 @@ const Portfolio = () => {
 								<div
 									key={project.id}
 									className='project'
-									onClick={() => handleClick(project.id)}
+									onClick={() => handleClick(project.projectName)}
 								>
 									<div className='project-image'>
 										<Image src={project.thumbnail} size='large' />

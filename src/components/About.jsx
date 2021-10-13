@@ -10,7 +10,7 @@ import { Button } from 'semantic-ui-react';
 import {
 	aboutPageTransitions,
 	aboutPageVariants,
-} from '../animation/MotionSettings';
+} from '../animation/motionSettings';
 
 const About = () => {
 	const history = useHistory();
