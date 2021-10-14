@@ -3,10 +3,6 @@ import { useHistory } from 'react-router';
 import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { BsFillBriefcaseFill } from 'react-icons/bs';
-import {
-	portfolioPageVariants,
-	portfolioPageTransitions,
-} from '../animation/motionSettings';
 import { projects } from '../data/projects';
 import { Image } from 'semantic-ui-react';
 
@@ -29,12 +25,10 @@ const Portfolio = () => {
 
 	return (
 		<motion.section
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
 			className='portfolio-section'
-			exit='out'
-			animate='in'
-			initial='out'
-			variants={portfolioPageVariants}
-			transition={portfolioPageTransitions}
 		>
 			<div className='close-icon' onClick={handleClose}>
 				<AiOutlineCloseCircle />

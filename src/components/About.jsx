@@ -7,10 +7,6 @@ import { BsPersonBoundingBox } from 'react-icons/bs';
 import { ImFilePdf } from 'react-icons/im';
 import { FaRegEdit } from 'react-icons/fa';
 import { Button } from 'semantic-ui-react';
-import {
-	aboutPageTransitions,
-	aboutPageVariants,
-} from '../animation/motionSettings';
 
 const About = () => {
 	const history = useHistory();
@@ -25,12 +21,10 @@ const About = () => {
 
 	return (
 		<motion.section
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
 			className='about-section'
-			exit='out'
-			animate='in'
-			initial='out'
-			variants={aboutPageVariants}
-			transition={aboutPageTransitions}
 		>
 			<div className='close-icon' onClick={handleClose}>
 				<AiOutlineCloseCircle />

@@ -5,10 +5,6 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { HiMailOpen } from 'react-icons/hi';
 import { Button, Icon } from 'semantic-ui-react';
 import TextField from '@mui/material/TextField';
-import {
-	contactPageVariants,
-	contactPageTransitions,
-} from '../animation/motionSettings';
 import * as emailjs from 'emailjs-com';
 const emailjsUser = process.env.REACT_APP_EMAIL_USER;
 
@@ -75,12 +71,10 @@ const Contact = () => {
 
 	return (
 		<motion.section
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
 			className='contact-section'
-			exit='out'
-			animate='in'
-			initial='out'
-			variants={contactPageVariants}
-			transition={contactPageTransitions}
 		>
 			<div className='close-icon' onClick={handleClose}>
 				<AiOutlineCloseCircle />

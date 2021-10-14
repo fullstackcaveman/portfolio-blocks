@@ -3,10 +3,6 @@ import { useHistory } from 'react-router';
 import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { Button, Divider, Icon, Image } from 'semantic-ui-react';
-import {
-	projectPageVariants,
-	projectPageTransitions,
-} from '../../animation/motionSettings';
 
 const ProjectCard = ({ project }) => {
 	const history = useHistory();
@@ -21,12 +17,10 @@ const ProjectCard = ({ project }) => {
 
 	return (
 		<motion.section
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
 			className='project-section'
-			exit='out'
-			animate='in'
-			initial='out'
-			variants={projectPageVariants}
-			transition={projectPageTransitions}
 		>
 			<div className='close-icon' onClick={handleClose}>
 				<AiOutlineCloseCircle />

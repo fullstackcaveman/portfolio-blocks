@@ -1,0 +1,467 @@
+@media (max-width: 1460px) {
+	.main-container {
+		.content-area {
+			.contact-section {
+				.info-section {
+					.personal-info {
+						.split-section {
+							.form {
+								.note {
+									h6 {
+										font-size: 1.7rem;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.main-container {
+		.content-area {
+			.contact-section {
+				.info-section {
+					.personal-info {
+						.split-section {
+							.form {
+								.note {
+									h6 {
+										font-size: 1.5rem;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Hide Particles
+@media (max-width: 1080px) {
+	.main-container {
+		.portfolio-pic {
+			display: none;
+		}
+
+		.content-area {
+			width: 100%;
+			margin-left: 20px;
+			.contact-section {
+				.info-section {
+					.personal-info {
+						.split-section {
+							.form {
+								.note {
+									h6 {
+										font-size: 2rem;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 680px) {
+	.main-container {
+		.portfolio-pic {
+			display: none;
+		}
+
+		.content-area {
+			.blocks {
+				.top-row,
+				.bottom-row {
+					flex-direction: column;
+					justify-content: space-around;
+					align-items: center;
+					width: 100%;
+				}
+
+				.top-row {
+					height: auto;
+					.block-1 {
+						width: 100%;
+						.block-1-content {
+							width: 100%;
+						}
+					}
+
+					.block-2 {
+						width: 100%;
+						height: 200px;
+						margin: 0;
+						margin-top: 50px;
+					}
+				}
+
+				.bottom-row {
+					height: auto;
+					.block-3 {
+						width: 100%;
+						height: 200px;
+						margin: 0;
+					}
+
+					.block-4 {
+						width: 100%;
+						height: 200px;
+						margin: 0;
+						margin-top: 20px;
+					}
+				}
+			}
+
+			.about-section {
+				.info-section {
+					.personal-info {
+						.split-section {
+							flex-direction: column;
+							align-items: center;
+
+							.buttons {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+
+			.project-section {
+				.project-info {
+					flex-direction: column;
+
+					.project-image {
+						margin: 0;
+						width: 80%;
+					}
+
+					.project-data {
+						width: 100%;
+
+						h2 {
+							font-size: 2.5rem;
+							text-align: center;
+							margin-top: 20px;
+						}
+					}
+				}
+			}
+
+			.contact-section {
+				.info-section {
+					.personal-info {
+						.split-section {
+							flex-direction: column;
+							align-items: center;
+							.form {
+								width: 100%;
+								.note {
+									margin-bottom: 20px;
+									h6 {
+										font-size: 2rem;
+									}
+
+									p {
+										font-size: 15px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.main-container {
+		.content-area {
+			.blocks {
+				.top-row {
+					.block-2 {
+						height: 145px;
+					}
+				}
+
+				.bottom-row {
+					.block-3 {
+						height: 145px;
+					}
+
+					.block-4 {
+						height: 145px;
+					}
+				}
+			}
+
+			.about-section {
+				.close-icon {
+					font-size: 2.5rem;
+				}
+
+				.page-title {
+					margin-top: 50px;
+				}
+
+				.info-section {
+					.personal-info {
+						.description {
+							padding: 10px;
+						}
+
+						.split-section {
+							.contact {
+								width: 100%;
+								align-items: center;
+								text-align: center;
+							}
+						}
+					}
+				}
+			}
+
+			.portfolio-section {
+				align-items: center;
+
+				.close-icon {
+					font-size: 2.5rem;
+					z-index: 2;
+				}
+
+				.page-title {
+					margin-top: 50px;
+
+					h2 {
+						font-size: 2.5rem;
+					}
+				}
+
+				.info-section {
+					width: 90%;
+				}
+			}
+
+			.project-section {
+				.close-icon {
+					font-size: 2.5rem;
+				}
+
+				.project-info {
+					flex-direction: column;
+					padding: 0;
+					margin-top: 30px;
+
+					.project-image {
+						margin: 0;
+						width: 80%;
+					}
+
+					.project-data {
+						width: 100%;
+
+						h2 {
+							font-size: 2.5rem;
+							text-align: center;
+							margin-top: 20px;
+						}
+					}
+				}
+
+				.buttons {
+					flex-direction: column;
+
+					a {
+						margin: 10px 0;
+					}
+				}
+			}
+
+			.contact-section {
+				.close-icon {
+					font-size: 2.5rem;
+				}
+
+				.page-title {
+					margin-top: 30px;
+
+					h2 {
+						font-size: 2.5rem;
+					}
+				}
+
+				.info-section {
+					.personal-info {
+						.split-section {
+							.contact {
+								width: 100%;
+							}
+
+							.form {
+								.note {
+									margin-bottom: 20px;
+									h6 {
+										font-size: 1.7rem;
+										line-height: 1.1;
+									}
+
+									p {
+										font-size: 15px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.main-container {
+		.content-area {
+			.blocks {
+				.top-row {
+					.block-1 {
+						margin: 0;
+
+						.block-1-content {
+							h1 {
+								font-size: 2.5rem;
+							}
+							.typewriter {
+								font-size: 1.5rem;
+							}
+						}
+					}
+
+					.block-2 {
+						height: 120px;
+					}
+				}
+
+				.bottom-row {
+					.block-3 {
+						height: 120px;
+					}
+
+					.block-4 {
+						height: 120px;
+					}
+				}
+			}
+
+			.about-section {
+				.info-section {
+					.personal-info {
+						.split-section {
+							.contact {
+								font-size: 1.3rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.main-container {
+		.content-area {
+			.blocks {
+				.top-row {
+					.block-1 {
+						.block-1-content {
+							.typewriter {
+								font-size: 1.3rem;
+							}
+						}
+					}
+
+					.block-2 {
+						height: 95px;
+					}
+				}
+
+				.bottom-row {
+					.block-3 {
+						height: 95px;
+					}
+
+					.block-4 {
+						height: 95px;
+					}
+				}
+			}
+
+			.about-section {
+				.page-title {
+					h2 {
+						font-size: 2.8rem;
+					}
+				}
+				.info-section {
+					.personal-info {
+						h6 {
+							font-size: 2rem;
+						}
+					}
+				}
+			}
+
+			.project-section {
+				.project-info {
+					.project-data {
+						h2 {
+							font-size: 2rem;
+						}
+
+						p {
+							font-size: 15px;
+						}
+					}
+				}
+			}
+
+			.contact-section {
+				.page-title {
+					h2 {
+						font-size: 2rem;
+					}
+				}
+
+				.info-section {
+					.personal-info {
+						.split-section {
+							.contact {
+								font-size: 15px;
+							}
+
+							.form {
+								padding: 0;
+								margin-top: 40px;
+								.note {
+									h6 {
+										font-size: 1.3rem;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

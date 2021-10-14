@@ -221,7 +221,7 @@ body > div:nth-child(6) > div {
 		}
 
 		.about-section {
-			position: absolute;
+			// position: absolute;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -232,8 +232,8 @@ body > div:nth-child(6) > div {
 			.close-icon {
 				transition: all 0.3s ease-in-out;
 				position: fixed;
-				top: 0px;
-				right: 0px;
+				top: 20px;
+				right: 30px;
 				color: $accent-color;
 				font-size: 50px;
 
@@ -368,7 +368,7 @@ body > div:nth-child(6) > div {
 		}
 
 		.portfolio-section {
-			position: absolute;
+			// position: absolute;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -378,8 +378,8 @@ body > div:nth-child(6) > div {
 			.close-icon {
 				transition: all 0.3s ease-in-out;
 				position: fixed;
-				top: 0px;
-				right: 0px;
+				top: 20px;
+				right: 30px;
 				color: $accent-color;
 				font-size: 50px;
 
@@ -505,7 +505,7 @@ body > div:nth-child(6) > div {
 		}
 
 		.project-section {
-			position: absolute;
+			// position: absolute;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -517,8 +517,8 @@ body > div:nth-child(6) > div {
 			.close-icon {
 				transition: all 0.3s ease-in-out;
 				position: fixed;
-				top: 10px;
-				right: 10px;
+				top: 20px;
+				right: 30px;
 				color: $accent-color;
 				font-size: 50px;
 
@@ -593,7 +593,7 @@ body > div:nth-child(6) > div {
 		}
 
 		.contact-section {
-			position: absolute;
+			// position: absolute;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -605,8 +605,8 @@ body > div:nth-child(6) > div {
 			.close-icon {
 				transition: all 0.3s ease-in-out;
 				position: fixed;
-				top: 10px;
-				right: 10px;
+				top: 20px;
+				right: 30px;
 				color: $accent-color;
 				font-size: 50px;
 
@@ -806,3 +806,5 @@ body > div:nth-child(6) > div {
 		}
 	}
 }
+
+@import 'mediaQueries';

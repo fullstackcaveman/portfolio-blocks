@@ -74,7 +74,7 @@ const Home = () => {
 				className='content-area'
 				style={{ overflowX: 'hidden', position: 'relative' }}
 			>
-				<AnimatePresence>
+				<AnimatePresence exitBeforeEnter>
 					<Switch location={location} key={location.pathname}>
 						<Route exact path='/' component={HomeBlocks} />
 						<Route path='/about' component={About} />

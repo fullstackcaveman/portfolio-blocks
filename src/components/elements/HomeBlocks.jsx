@@ -1,10 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Block1 from './Block1';
-import {
-	homeBlocksVariants,
-	homeBlockTransitions,
-} from '../../animation/motionSettings';
 import { useEffect } from 'react';
 
 const HomeBlocks = () => {
@@ -14,11 +10,9 @@ const HomeBlocks = () => {
 
 	return (
 		<motion.div
-			exit='out'
-			animate='in'
-			initial='out'
-			variants={homeBlocksVariants}
-			transition={homeBlockTransitions}
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
 			className='blocks'
 		>
 			<div className='top-row'>
