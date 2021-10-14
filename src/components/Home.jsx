@@ -12,7 +12,6 @@ import { Button, Popup } from 'semantic-ui-react';
 
 const Home = () => {
 	const [currentScore, setCurrentScore] = useState(0);
-	const [resetIcons, setResetIcons] = useState(false);
 	const location = useLocation();
 
 	const setProject = () => {
@@ -44,7 +43,7 @@ const Home = () => {
 			<Popup
 				trigger={
 					<div className='portfolio-pic' onClick={handleAddIcons}>
-						<PortfolioPic reset={resetIcons} setReset={setResetIcons} />
+						<PortfolioPic />
 					</div>
 				}
 				position='right center'
