@@ -1,4 +1,4 @@
-import { Switch, Route, useLocation } from 'react-router-dom';
+import { Switch, Route, useLocation, useHistory } from 'react-router-dom';
 import HomeBlocks from './elements/HomeBlocks';
 import PortfolioPic from './elements/PortfolioPic';
 import About from './About';
@@ -13,6 +13,8 @@ import { Button, Popup } from 'semantic-ui-react';
 const Home = () => {
 	const [currentScore, setCurrentScore] = useState(0);
 	const location = useLocation();
+
+	const history = useHistory();
 
 	const setProject = () => {
 		const projectCall = [];
@@ -35,6 +37,7 @@ const Home = () => {
 	};
 
 	const handleReset = () => {
+		history.push('/');
 		window.location.reload(false);
 	};
 
