@@ -33,11 +33,11 @@ export const aboutPageTransitions = {
 export const portfolioPageVariants = {
 	in: {
 		opacity: 1,
-		x: 0,
+		y: 0,
 	},
 	out: {
 		opacity: 0,
-		x: '100vw',
+		y: '-100vh',
 	},
 };
 
@@ -49,11 +49,11 @@ export const portfolioPageTransitions = {
 export const projectPageVariants = {
 	in: {
 		opacity: 1,
-		x: 0,
+		y: 0,
 	},
 	out: {
 		opacity: 0,
-		x: '100vw',
+		y: '100vh',
 	},
 };
 
