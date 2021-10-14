@@ -84,6 +84,7 @@ const Home = () => {
 					</Switch>
 				</AnimatePresence>
 			</div>
+			{/* <div className='copyright'>&copy; FullStackCaveman</div> */}
 		</main>
 	);
 };
