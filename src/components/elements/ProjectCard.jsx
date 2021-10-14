@@ -27,7 +27,11 @@ const ProjectCard = ({ project }) => {
 			</div>
 			<div className='project-info'>
 				<div className='project-image'>
-					<Image src={project.thumbnail} size='large' />
+					<Image
+						src={project.thumbnail}
+						size='large'
+						alt={project.projectName}
+					/>
 				</div>
 				<div className='project-data'>
 					<h2>{project.projectName.toUpperCase()}</h2>

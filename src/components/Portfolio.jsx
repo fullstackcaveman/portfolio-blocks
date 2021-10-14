@@ -57,7 +57,11 @@ const Portfolio = () => {
 									onClick={() => handleClick(project.projectName)}
 								>
 									<div className='project-image'>
-										<Image src={project.thumbnail} size='large' />
+										<Image
+											src={project.thumbnail}
+											size='large'
+											alt={project.projectName}
+										/>
 									</div>
 									<span className='project-name-wrap'>
 										<div className='project-name'>
