@@ -12,6 +12,23 @@ body {
 	box-sizing: border-box;
 }
 
+body > div:nth-child(6) > div {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	align-items: center;
+
+	.score {
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: $accent-color;
+	}
+
+	.ui.button {
+		background-color: $accent-color;
+	}
+}
+
 .accent {
 	color: $accent-color;
 }
@@ -33,9 +50,12 @@ body {
 			cursor: pointer;
 		}
 
+		// .particles {
+		// 	height: 100%;
 		#tsparticles {
 			height: 100%;
 		}
+		// }
 	}
 
 	.content-area {

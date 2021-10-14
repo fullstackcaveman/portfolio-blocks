@@ -17,7 +17,7 @@ const ProjectCard = ({ project }) => {
 
 	useEffect(() => {
 		document.title = `FullStackCaveman | ${project.projectName}`;
-	}, []);
+	}, [project.projectName]);
 
 	return (
 		<motion.section

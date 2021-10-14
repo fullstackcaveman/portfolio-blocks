@@ -56,7 +56,7 @@ export const projects = [
 		id: 4,
 		projectName: 'Portfolio Website',
 		client: 'Personal Project',
-		description: '',
+		description: 'Personal portfolio website',
 		thumbnail:
 			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634068837/Portfolio%20Website/blocks_portfolio_thumb_ob9jd7.png',
 		techStack: ['React,', 'Semantic-UI-React,', 'SASS'],
