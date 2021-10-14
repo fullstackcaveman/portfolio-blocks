@@ -56,6 +56,7 @@ const Home = () => {
 				}
 				content={
 					<>
+						<p>(You'll know when you've reached the limit!)</p>
 						<br />
 						<p>Each click inserts 4 icons</p>
 						<br />
