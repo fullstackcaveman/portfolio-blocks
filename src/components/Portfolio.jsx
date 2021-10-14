@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router';
+import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { BsFillBriefcaseFill } from 'react-icons/bs';
 import {
@@ -8,8 +8,6 @@ import {
 	portfolioPageTransitions,
 } from '../animation/motionSettings';
 import { projects } from '../data/projects';
-// import ProjectCard from './elements/ProjectCard';
-
 import { Image } from 'semantic-ui-react';
 
 const Portfolio = () => {

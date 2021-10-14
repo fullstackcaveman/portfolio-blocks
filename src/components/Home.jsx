@@ -38,7 +38,6 @@ const Home = () => {
 
 	const handleReset = () => {
 		history.push('/');
-		window.location.reload(false);
 	};
 
 	return (

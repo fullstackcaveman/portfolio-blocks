@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router';
+import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { FaIdCard } from 'react-icons/fa';
 import { BsPersonBoundingBox } from 'react-icons/bs';
