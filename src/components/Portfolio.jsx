@@ -6,6 +6,7 @@ import { BsFillBriefcaseFill } from 'react-icons/bs';
 import { projects } from '../data/projects';
 import { Image } from 'semantic-ui-react';
 import SeoSettings from '../seo/SeoSettings';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
 	const history = useHistory();
@@ -14,10 +15,9 @@ const Portfolio = () => {
 		history.push('/');
 	};
 
-	const handleClick = (project) => {
+	const handleUrl = (project) => {
 		const projectUrl = project.replaceAll(' ', '-').toLowerCase();
-
-		history.push(`/projects/${projectUrl}`);
+		return `/projects/${projectUrl}`;
 	};
 
 	useEffect(() => {
@@ -75,10 +75,10 @@ const Portfolio = () => {
 					<div className='projects'>
 						{projects.map((project) => {
 							return (
-								<div
+								<Link
 									key={project.id}
 									className='project'
-									onClick={() => handleClick(project.projectName)}
+									to={handleUrl(project.projectName)}
 								>
 									<div className='project-image'>
 										<Image
@@ -92,7 +92,7 @@ const Portfolio = () => {
 											{project.projectName.toUpperCase()}
 										</div>
 									</span>
-								</div>
+								</Link>
 							);
 						})}
 					</div>
