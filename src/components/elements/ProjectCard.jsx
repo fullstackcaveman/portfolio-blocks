@@ -36,7 +36,7 @@ const ProjectCard = ({ project }) => {
 			'website developer',
 			'freelance web development',
 		],
-		pageUrl: `/projects/${projectUrl}`,
+		pageUrl: `/portfolio/${projectUrl}`,
 		pageImage: project.thumbnail,
 	};
 

@@ -17,7 +17,7 @@ const Portfolio = () => {
 
 	const handleUrl = (project) => {
 		const projectUrl = project.replaceAll(' ', '-').toLowerCase();
-		return `/projects/${projectUrl}`;
+		return `/portfolio/${projectUrl}`;
 	};
 
 	useEffect(() => {
