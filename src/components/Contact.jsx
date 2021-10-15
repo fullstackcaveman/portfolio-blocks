@@ -137,7 +137,7 @@ const Contact = () => {
 									<a
 										href='mailto:chris@fullstackcaveman.com'
 										target='_blank'
-										rel='noreferrer'
+										rel='noreferrer noopener nofollow'
 									>
 										chris@fullstackcaveman.com
 									</a>
@@ -153,7 +153,7 @@ const Contact = () => {
 									<a
 										href='https://goo.gl/maps/mNoRv1Ae2HBcvb5v5'
 										target='_blank'
-										rel='noreferrer'
+										rel='noreferrer noopener nofollow'
 									>
 										Great Falls, MT
 									</a>
@@ -168,7 +168,7 @@ const Contact = () => {
 									<a
 										href='https://www.linkedin.com/in/fullstackcaveman/'
 										target='_blank'
-										rel='noreferrer'
+										rel='noreferrer noopener nofollow'
 									>
 										<Button
 											color='linkedin'

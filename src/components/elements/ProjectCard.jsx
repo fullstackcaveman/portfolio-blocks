@@ -90,7 +90,11 @@ const ProjectCard = ({ project }) => {
 				{project.deployedLink === 'none' ? (
 					<></>
 				) : (
-					<a href={project.deployedLink} target='_blank' rel='noreferrer'>
+					<a
+						href={project.deployedLink}
+						target='_blank'
+						rel='noreferrer noopener'
+					>
 						<Button icon>
 							Live Site
 							<span className='btn-icon'>
