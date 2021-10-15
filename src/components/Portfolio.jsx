@@ -59,7 +59,7 @@ const Portfolio = () => {
 									<div className='project-image'>
 										<Image
 											src={project.thumbnail}
-											size='large'
+											size='medium'
 											alt={project.projectName}
 										/>
 									</div>

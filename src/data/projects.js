@@ -1,7 +1,7 @@
 export const projects = [
 	{
 		id: 1,
-		projectName: 'Asylum Case Database App',
+		projectName: 'Asylum Case Database',
 		client: 'Human Rights First',
 		description:
 			"First of it's kind asylum case outcome aggregator database. Used by asylum lawyers for case research.",
