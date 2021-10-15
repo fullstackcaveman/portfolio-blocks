@@ -6,6 +6,7 @@ import { HiMailOpen } from 'react-icons/hi';
 import { Button, Icon } from 'semantic-ui-react';
 import TextField from '@mui/material/TextField';
 import * as emailjs from 'emailjs-com';
+import SeoSettings from './elements/SeoSettings';
 const emailjsUser = process.env.REACT_APP_EMAIL_USER;
 
 const initialValues = {
@@ -30,6 +31,28 @@ const Contact = () => {
 	useEffect(() => {
 		document.title = `FullStackCaveman | Contact`;
 	}, []);
+
+	const pageSeo = {
+		pageTitle: '| Contact',
+		pageDescription: 'FullStackCaveman Portfolio Website',
+		pageKeywords: [
+			'contact',
+			'fullstackcaveman',
+			'great falls, mt',
+			'web developer',
+			'software developer',
+			'front end developer',
+			'back end developer',
+			'full stack developer',
+			'great falls, mt',
+			'montana website developer',
+			'website developer',
+			'freelance web development',
+		],
+		pageUrl: '/contact',
+		pageImage:
+			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634251070/Portfolio%20Website/blocks-portfolio-about-thumb_kmvay3.png',
+	};
 
 	const handleChange = (e) => {
 		setValue({
@@ -76,6 +99,7 @@ const Contact = () => {
 			exit={{ opacity: 0 }}
 			className='contact-section'
 		>
+			<SeoSettings {...pageSeo} />
 			<div className='close-icon' onClick={handleClose}>
 				<AiOutlineCloseCircle />
 			</div>

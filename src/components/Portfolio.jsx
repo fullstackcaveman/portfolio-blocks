@@ -5,6 +5,7 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { BsFillBriefcaseFill } from 'react-icons/bs';
 import { projects } from '../data/projects';
 import { Image } from 'semantic-ui-react';
+import SeoSettings from './elements/SeoSettings';
 
 const Portfolio = () => {
 	const history = useHistory();
@@ -23,6 +24,28 @@ const Portfolio = () => {
 		document.title = 'FullStackCaveman | Portfolio';
 	}, []);
 
+	const pageSeo = {
+		pageTitle: '| Portfolio',
+		pageDescription: 'FullStackCaveman portfolio of work',
+		pageKeywords: [
+			'portfolio',
+			'fullstackcaveman',
+			'great falls, mt',
+			'web developer',
+			'software developer',
+			'front end developer',
+			'back end developer',
+			'full stack developer',
+			'great falls, mt',
+			'montana website developer',
+			'website developer',
+			'freelance web development',
+		],
+		pageUrl: '/portfolio',
+		pageImage:
+			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634313989/Portfolio%20Website/blocks-portfolio-portfolio-thumb_r2e0wx.png',
+	};
+
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
@@ -30,6 +53,7 @@ const Portfolio = () => {
 			exit={{ opacity: 0 }}
 			className='portfolio-section'
 		>
+			<SeoSettings {...pageSeo} />
 			<div className='close-icon' onClick={handleClose}>
 				<AiOutlineCloseCircle />
 			</div>

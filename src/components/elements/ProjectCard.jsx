@@ -3,9 +3,12 @@ import { useHistory } from 'react-router';
 import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { Button, Divider, Icon, Image } from 'semantic-ui-react';
+import SeoSettings from './SeoSettings';
 
 const ProjectCard = ({ project }) => {
 	const history = useHistory();
+
+	const projectUrl = project.projectName.replaceAll(' ', '-').toLowerCase();
 
 	const handleClose = () => {
 		history.push('/portfolio');
@@ -15,6 +18,28 @@ const ProjectCard = ({ project }) => {
 		document.title = `FullStackCaveman | ${project.projectName}`;
 	}, [project.projectName]);
 
+	const pageSeo = {
+		pageTitle: `| ${project.projectName}`,
+		pageDescription: project.description,
+		pageKeywords: [
+			project.projectName,
+			project.description,
+			'fullstackcaveman',
+			'great falls, mt',
+			'web developer',
+			'software developer',
+			'front end developer',
+			'back end developer',
+			'full stack developer',
+			'great falls, mt',
+			'montana website developer',
+			'website developer',
+			'freelance web development',
+		],
+		pageUrl: `/projects/${projectUrl}`,
+		pageImage: project.thumbnail,
+	};
+
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
@@ -22,6 +47,7 @@ const ProjectCard = ({ project }) => {
 			exit={{ opacity: 0 }}
 			className='project-section'
 		>
+			<SeoSettings {...pageSeo} />
 			<div className='close-icon' onClick={handleClose}>
 				<AiOutlineCloseCircle />
 			</div>
