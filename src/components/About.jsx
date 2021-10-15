@@ -7,6 +7,7 @@ import { BsPersonBoundingBox } from 'react-icons/bs';
 import { ImFilePdf } from 'react-icons/im';
 import { FaRegEdit } from 'react-icons/fa';
 import { Button } from 'semantic-ui-react';
+import SeoSettings from './elements/SeoSettings';
 
 const About = () => {
 	const history = useHistory();
@@ -19,6 +20,21 @@ const About = () => {
 		document.title = 'About The FullStackCaveman';
 	}, []);
 
+	const pageSeo = {
+		pageTitle: '| About Me',
+		pageDescription: 'Learn about the FullStackCaveman',
+		pageKeywords: [
+			'fullstackcaveman',
+			'about',
+			'great falls, mt',
+			'web developer',
+			'software developer',
+		],
+		pageUrl: 'about',
+		pageImage:
+			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634068837/Portfolio%20Website/blocks_portfolio_thumb_ob9jd7.png',
+	};
+
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
@@ -26,6 +42,7 @@ const About = () => {
 			exit={{ opacity: 0 }}
 			className='about-section'
 		>
+			<SeoSettings {...pageSeo} />
 			<div className='close-icon' onClick={handleClose}>
 				<AiOutlineCloseCircle />
 			</div>

@@ -96,6 +96,6 @@ export const projects = [
 			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634186827/Demo%20Websites/burton-movie-thumb_ktu2rm.png',
 		techStack: ['React,', 'Styled Components'],
 		gitHubLinks: ['https://github.com/fullstackcaveman/burton-movies'],
-		deployedLink: 'https://fervent-volhard-27f0d8.netlify.app/580489',
+		deployedLink: 'https://fervent-volhard-27f0d8.netlify.app/',
 	},
 ];
