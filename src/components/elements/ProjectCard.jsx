@@ -3,7 +3,7 @@ import { useHistory } from 'react-router';
 import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { Button, Divider, Icon, Image } from 'semantic-ui-react';
-import SeoSettings from './SeoSettings';
+import SeoSettings from '../../seo/SeoSettings';
 
 const ProjectCard = ({ project }) => {
 	const history = useHistory();

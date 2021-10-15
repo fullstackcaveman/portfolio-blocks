@@ -7,7 +7,7 @@ import { BsPersonBoundingBox } from 'react-icons/bs';
 import { ImFilePdf } from 'react-icons/im';
 import { FaRegEdit } from 'react-icons/fa';
 import { Button } from 'semantic-ui-react';
-import SeoSettings from './elements/SeoSettings';
+import SeoSettings from '../seo/SeoSettings';
 
 const About = () => {
 	const history = useHistory();

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Block1 from './Block1';
 import { useEffect } from 'react';
-import SeoSettings from './SeoSettings';
+import SeoSettings from '../../seo/SeoSettings';
 
 const HomeBlocks = () => {
 	useEffect(() => {

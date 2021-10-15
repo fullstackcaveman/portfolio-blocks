@@ -5,7 +5,7 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { BsFillBriefcaseFill } from 'react-icons/bs';
 import { projects } from '../data/projects';
 import { Image } from 'semantic-ui-react';
-import SeoSettings from './elements/SeoSettings';
+import SeoSettings from '../seo/SeoSettings';
 
 const Portfolio = () => {
 	const history = useHistory();

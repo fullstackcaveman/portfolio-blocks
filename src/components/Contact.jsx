@@ -6,7 +6,7 @@ import { HiMailOpen } from 'react-icons/hi';
 import { Button, Icon } from 'semantic-ui-react';
 import TextField from '@mui/material/TextField';
 import * as emailjs from 'emailjs-com';
-import SeoSettings from './elements/SeoSettings';
+import SeoSettings from '../seo/SeoSettings';
 const emailjsUser = process.env.REACT_APP_EMAIL_USER;
 
 const initialValues = {
