@@ -7,6 +7,16 @@ import { Button, Icon } from 'semantic-ui-react';
 import TextField from '@mui/material/TextField';
 import * as emailjs from 'emailjs-com';
 import SeoSettings from '../seo/SeoSettings';
+import ReactPixel from 'react-facebook-pixel';
+
+const pixelOptions = {
+	autoConfig: true,
+	debug: false,
+};
+
+ReactPixel.init('258173202988755', pixelOptions);
+ReactPixel.pageView();
+
 const emailjsUser = process.env.REACT_APP_EMAIL_USER;
 
 const initialValues = {

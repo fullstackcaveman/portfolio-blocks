@@ -8,6 +8,15 @@ import { ImFilePdf } from 'react-icons/im';
 import { FaRegEdit } from 'react-icons/fa';
 import { Button } from 'semantic-ui-react';
 import SeoSettings from '../seo/SeoSettings';
+import ReactPixel from 'react-facebook-pixel';
+
+const pixelOptions = {
+	autoConfig: true,
+	debug: false,
+};
+
+ReactPixel.init('258173202988755', pixelOptions);
+ReactPixel.pageView();
 
 const About = () => {
 	const history = useHistory();
