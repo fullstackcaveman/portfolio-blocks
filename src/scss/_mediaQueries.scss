@@ -23,6 +23,17 @@
 @media (max-width: 1200px) {
 	.main-container {
 		.content-area {
+			.about-section {
+				.info-section {
+					.personal-info {
+						.certificate-image {
+							img {
+								width: 600px;
+							}
+						}
+					}
+				}
+			}
 			.contact-section {
 				.info-section {
 					.personal-info {

@@ -218,12 +218,10 @@ body > div:nth-child(6) > div {
 		}
 
 		.about-section {
-			// position: absolute;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			text-align: center;
-			// height: 100%;
 			margin: auto;
 
 			.close-icon {
@@ -268,9 +266,15 @@ body > div:nth-child(6) > div {
 				}
 
 				.personal-info {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+
 					h6 {
 						font-size: 30px;
 						margin-bottom: 20px;
+						line-height: 1.1;
 
 						.person-icon {
 							color: $accent-color;
@@ -280,14 +284,25 @@ body > div:nth-child(6) > div {
 					}
 
 					.description {
+						display: flex;
+
 						font-size: 20px;
 						font-weight: lighter;
 						line-height: 2;
+						width: 90%;
+					}
+
+					.certificate-image {
+						display: flex;
+						width: 100%;
+						justify-content: center;
+						align-items: center;
 					}
 				}
 
 				.split-section {
 					display: flex;
+					width: 100%;
 
 					.contact {
 						list-style: none;

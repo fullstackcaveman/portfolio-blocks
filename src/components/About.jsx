@@ -9,6 +9,7 @@ import { FaRegEdit } from 'react-icons/fa';
 import { Button } from 'semantic-ui-react';
 import SeoSettings from '../seo/SeoSettings';
 import ReactPixel from 'react-facebook-pixel';
+import { Link } from 'react-router-dom';
 
 const pixelOptions = {
 	autoConfig: true,
@@ -150,6 +151,13 @@ const About = () => {
 									</span>
 								</Button>
 							</a>
+
+							<Link to='/about/lambda-school-certificate'>
+								<Button size='large' className='resume-btn'>
+									<span className='btn-text'>LAMBDA CERTIFICATE</span>
+								</Button>
+							</Link>
+
 							<a
 								href='https://dev.to/fullstackcaveman'
 								target='_blank'
