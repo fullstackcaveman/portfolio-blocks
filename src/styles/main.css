@@ -754,6 +754,9 @@ body > div:nth-child(6) > div .ui.button {
   align-items: center;
   width: 100%;
 }
+.main-container .content-area .learning-section .info-section .learning-info .learning-items .certificates .certificates-container .certificate {
+  margin: 10px;
+}
 .main-container .content-area .learning-section .info-section .learning-info .learning-items .certificates .certificates-container .certificate:hover {
   cursor: zoom-in;
 }
@@ -1290,6 +1293,9 @@ body > div:nth-child(6) > div .ui.button {
   .main-container .content-area .about-section .info-section .personal-info .split-section .buttons {
     width: 100%;
   }
+  .main-container .content-area .learning-section .page-title {
+    margin-top: 50px;
+  }
   .main-container .content-area .project-section .project-info {
     flex-direction: column;
   }
@@ -1345,6 +1351,9 @@ body > div:nth-child(6) > div .ui.button {
     width: 100%;
     align-items: center;
     text-align: center;
+  }
+  .main-container .content-area .learning-section .page-title h2 {
+    font-size: 40px;
   }
   .main-container .content-area .portfolio-section {
     align-items: center;

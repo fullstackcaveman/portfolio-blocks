@@ -147,6 +147,12 @@
 				}
 			}
 
+			.learning-section {
+				.page-title {
+					margin-top: 50px;
+				}
+			}
+
 			.project-section {
 				.project-info {
 					flex-direction: column;
@@ -238,6 +244,14 @@
 								text-align: center;
 							}
 						}
+					}
+				}
+			}
+
+			.learning-section {
+				.page-title {
+					h2 {
+						font-size: 40px;
 					}
 				}
 			}
