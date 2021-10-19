@@ -79,7 +79,7 @@ const Home = () => {
 					<Switch location={location} key={location.pathname}>
 						<Route exact path='/' component={HomeBlocks} />
 						<Route path='/about' component={About} />
-						<Route path='/learning-history' component={LearningHistory} />
+						<Route path='/education-history' component={LearningHistory} />
 						<Route path='/portfolio/:id'>{setProject()}</Route>
 						<Route path='/portfolio' component={Portfolio} />
 						<Route path='/contact' component={Contact} />

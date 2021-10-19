@@ -20,20 +20,20 @@ const LearningHistory = () => {
 	const history = useHistory();
 
 	const handleClose = () => {
-		history.push('/');
+		history.push('/about');
 	};
 
 	useEffect(() => {
-		document.title = 'FullStackCaveman | Learning History';
+		document.title = 'FullStackCaveman | Education History';
 	}, []);
 
 	const pageSeo = {
-		pageTitle: '| Learning History',
+		pageTitle: '| Education History',
 		pageDescription: 'FullStackCaveman Certifications And Badges',
 		pageKeywords: [
 			'certifications',
 			'badges',
-			'learning history',
+			'education history',
 			'fullstackcaveman',
 			'great falls, mt',
 			'web developer',
@@ -46,8 +46,9 @@ const LearningHistory = () => {
 			'website developer',
 			'freelance web development',
 		],
-		pageUrl: '/learning-history',
-		pageImage: '',
+		pageUrl: '/education-history',
+		pageImage:
+			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634582849/Portfolio%20Website/blocks-portfolio-certificate-thumb_ef21c7.png',
 	};
 
 	return (
@@ -63,7 +64,7 @@ const LearningHistory = () => {
 			</div>
 			<div className='page-title'>
 				<h2>
-					<span>LEARNING</span> <span className='accent'>HISTORY</span>
+					<span>EDUCATION</span> <span className='accent'>HISTORY</span>
 				</h2>
 			</div>
 			<div className='info-section'>
@@ -138,7 +139,7 @@ const LearningHistory = () => {
 													rel='noreferrer nofollow noopener'
 												>
 													<Button size='small' className='verify-btn'>
-														VERIFY BADGE
+														CLICK TO VERIFY BADGE
 													</Button>
 												</a>
 											}

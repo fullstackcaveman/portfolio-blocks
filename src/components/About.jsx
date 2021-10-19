@@ -152,9 +152,9 @@ const About = () => {
 								</Button>
 							</a>
 
-							<Link to='/learning-history'>
+							<Link to='/education-history'>
 								<Button size='large' className='resume-btn'>
-									<span className='btn-text'>LEARNING HISTORY</span>
+									<span className='btn-text'>EDUCATION HISTORY</span>
 								</Button>
 							</Link>
 
