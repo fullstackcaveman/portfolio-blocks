@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { FaIdCard } from 'react-icons/fa';
 import { BsPersonBoundingBox } from 'react-icons/bs';
+import { IoMdSchool } from 'react-icons/io';
 import { ImFilePdf } from 'react-icons/im';
 import { FaRegEdit } from 'react-icons/fa';
 import { Button } from 'semantic-ui-react';
@@ -155,6 +156,10 @@ const About = () => {
 							<Link to='/education-history'>
 								<Button size='large' className='resume-btn'>
 									<span className='btn-text'>EDUCATION HISTORY</span>
+									<span className='btn-icon'>
+										{' '}
+										<IoMdSchool />
+									</span>
 								</Button>
 							</Link>
 
