@@ -637,6 +637,7 @@ body > div:nth-child(6) > div .ui.button {
   margin: 10px 0;
   width: 250px;
   border: 1px solid #111;
+  transition: all 0.3s ease-in-out;
 }
 .main-container .content-area .about-section .info-section .split-section .buttons .resume-btn .btn-icon {
   font-weight: bold;
@@ -656,6 +657,7 @@ body > div:nth-child(6) > div .ui.button {
   border: 1px solid #ffb400;
   margin: 10px 0;
   width: 250px;
+  transition: all 0.3s ease-in-out;
 }
 .main-container .content-area .about-section .info-section .split-section .buttons .blog-btn .btn-icon {
   font-weight: bold;
@@ -1125,6 +1127,7 @@ body > div:nth-child(6) > div .ui.button {
   margin: 0 5px;
 }
 .main-container .content-area .contact-section .info-section .split-section .contact .m10 .socials a .dev {
+  transition: all 0.3s ease-in-out;
   border: 1px solid #ffb400;
 }
 .main-container .content-area .contact-section .info-section .split-section .contact .m10 li {
@@ -1192,6 +1195,7 @@ body > div:nth-child(6) > div .ui.button {
   margin: 10px 0;
   width: 250px;
   border: 1px solid #111;
+  transition: all 0.3s ease-in-out;
 }
 .main-container .content-area .contact-section .info-section .split-section .buttons .resume-btn .btn-icon {
   font-weight: bold;

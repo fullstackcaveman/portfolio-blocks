@@ -346,6 +346,7 @@ body > div:nth-child(6) > div {
 							margin: 10px 0;
 							width: 250px;
 							border: 1px solid $dark-grey;
+							transition: all 0.3s ease-in-out;
 
 							.btn-icon {
 								font-weight: bold;
@@ -368,6 +369,7 @@ body > div:nth-child(6) > div {
 							border: 1px solid $accent-color;
 							margin: 10px 0;
 							width: 250px;
+							transition: all 0.3s ease-in-out;
 
 							.btn-icon {
 								font-weight: bold;
@@ -945,6 +947,7 @@ body > div:nth-child(6) > div {
 									margin: 0 5px;
 
 									.dev {
+										transition: all 0.3s ease-in-out;
 										border: 1px solid $accent-color;
 									}
 								}
@@ -1020,6 +1023,7 @@ body > div:nth-child(6) > div {
 							margin: 10px 0;
 							width: 250px;
 							border: 1px solid $dark-grey;
+							transition: all 0.3s ease-in-out;
 
 							.btn-icon {
 								font-weight: bold;
