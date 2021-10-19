@@ -152,9 +152,9 @@ const About = () => {
 								</Button>
 							</a>
 
-							<Link to='/about/lambda-school-certificate'>
+							<Link to='/learning-history'>
 								<Button size='large' className='resume-btn'>
-									<span className='btn-text'>LAMBDA CERTIFICATE</span>
+									<span className='btn-text'>LEARNING HISTORY</span>
 								</Button>
 							</Link>
 

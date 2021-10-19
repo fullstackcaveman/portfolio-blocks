@@ -3,7 +3,7 @@ import { useHistory } from 'react-router';
 import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { Icon, Image } from 'semantic-ui-react';
-import SeoSettings from '../seo/SeoSettings';
+import SeoSettings from '../../seo/SeoSettings';
 import ReactPixel from 'react-facebook-pixel';
 
 const pixelOptions = {
@@ -18,7 +18,7 @@ const LambdaCert = () => {
 	const history = useHistory();
 
 	const handleClose = () => {
-		history.push('/about');
+		history.push('/certifications');
 	};
 
 	useEffect(() => {
@@ -43,7 +43,7 @@ const LambdaCert = () => {
 			'website developer',
 			'freelance web development',
 		],
-		pageUrl: '/about/lambda-school-certificate',
+		pageUrl: '/certifications/lambda-school-certificate',
 		pageImage:
 			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634582849/Portfolio%20Website/blocks-portfolio-certificate-thumb_ef21c7.png',
 	};

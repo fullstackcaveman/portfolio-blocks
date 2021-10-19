@@ -7,9 +7,9 @@ import Portfolio from './Portfolio';
 import { projects } from '../data/projects';
 import ProjectCard from './elements/ProjectCard';
 import Contact from './Contact';
+import LearningHistory from './LearningHistory';
 import { useState } from 'react';
 import { Button, Popup } from 'semantic-ui-react';
-import LambdaCert from './LambdaCert';
 
 const Home = () => {
 	const [currentScore, setCurrentScore] = useState(0);
@@ -78,11 +78,8 @@ const Home = () => {
 				<AnimatePresence exitBeforeEnter>
 					<Switch location={location} key={location.pathname}>
 						<Route exact path='/' component={HomeBlocks} />
-						<Route
-							path='/about/lambda-school-certificate'
-							component={LambdaCert}
-						/>
 						<Route path='/about' component={About} />
+						<Route path='/learning-history' component={LearningHistory} />
 						<Route path='/portfolio/:id'>{setProject()}</Route>
 						<Route path='/portfolio' component={Portfolio} />
 						<Route path='/contact' component={Contact} />

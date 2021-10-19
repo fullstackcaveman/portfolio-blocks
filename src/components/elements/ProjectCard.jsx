@@ -88,15 +88,19 @@ const ProjectCard = ({ project }) => {
 			</div>
 			<Divider inverted />
 			<div className='buttons'>
-				<a href={project.gitHubLinks[0]} target='_blank' rel='noreferrer'>
-					<Button icon>
-						GitHub Repo
-						<span className='btn-icon'>
-							<Icon name='external' />
-						</span>
-					</Button>
-				</a>
-				{project.deployedLink === 'none' ? (
+				{project.gitHubLinks.length < 1 ? (
+					<></>
+				) : (
+					<a href={project.gitHubLinks[0]} target='_blank' rel='noreferrer'>
+						<Button icon>
+							GitHub Repo
+							<span className='btn-icon'>
+								<Icon name='external' />
+							</span>
+						</Button>
+					</a>
+				)}
+				{project.deployedLink === null ? (
 					<></>
 				) : (
 					<a
