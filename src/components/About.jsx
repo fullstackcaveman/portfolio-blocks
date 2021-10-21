@@ -60,7 +60,7 @@ const About = () => {
 			</div>
 			<div className='page-title'>
 				<h2>
-					<span>ABOUT</span> <span className='accent'>ME</span>
+					<span>HIRE</span> <span className='accent'>ME</span>
 				</h2>
 			</div>
 			<div className='info-section'>
