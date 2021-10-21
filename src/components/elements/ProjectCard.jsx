@@ -6,12 +6,6 @@ import { Button, Divider, Icon, Image } from 'semantic-ui-react';
 import SeoSettings from '../../seo/SeoSettings';
 import ReactPixel from 'react-facebook-pixel';
 
-const pixelOptions = {
-	autoConfig: true,
-	debug: false,
-};
-
-ReactPixel.init('258173202988755', pixelOptions);
 ReactPixel.pageView();
 
 const ProjectCard = ({ project }) => {
@@ -60,6 +54,9 @@ const ProjectCard = ({ project }) => {
 			<div className='close-icon' onClick={handleClose}>
 				<AiOutlineCloseCircle />
 			</div>
+			<div className='fancy-title'>
+				<h1>{project.projectName.toUpperCase()}</h1>
+			</div>
 			<div className='project-info'>
 				<div className='project-image'>
 					<Image
@@ -69,7 +66,6 @@ const ProjectCard = ({ project }) => {
 					/>
 				</div>
 				<div className='project-data'>
-					<h2>{project.projectName.toUpperCase()}</h2>
 					<p className='align-middle'>
 						<span className='bold mr5'>Client: </span>
 						{project.client}
@@ -84,39 +80,59 @@ const ProjectCard = ({ project }) => {
 							return `${tech} `;
 						})}
 					</p>
+
+					<div className='buttons'>
+						{project.gitHubLinks.length < 1 ? (
+							<></>
+						) : (
+							<a href={project.gitHubLinks[0]} target='_blank' rel='noreferrer'>
+								<Button icon>
+									GitHub Repo
+									<span className='btn-icon'>
+										<Icon name='external' />
+									</span>
+								</Button>
+							</a>
+						)}
+						{project.deployedLink === null ? (
+							<></>
+						) : (
+							<a
+								href={project.deployedLink}
+								target='_blank'
+								rel='noreferrer noopener'
+							>
+								<Button icon>
+									Live Site
+									<span className='btn-icon'>
+										<Icon name='external' />
+									</span>
+								</Button>
+							</a>
+						)}
+					</div>
 				</div>
 			</div>
 			<Divider inverted />
-			<div className='buttons'>
-				{project.gitHubLinks.length < 1 ? (
-					<></>
-				) : (
-					<a href={project.gitHubLinks[0]} target='_blank' rel='noreferrer'>
-						<Button icon>
-							GitHub Repo
-							<span className='btn-icon'>
-								<Icon name='external' />
-							</span>
-						</Button>
-					</a>
-				)}
-				{project.deployedLink === null ? (
-					<></>
-				) : (
-					<a
-						href={project.deployedLink}
-						target='_blank'
-						rel='noreferrer noopener'
-					>
-						<Button icon>
-							Live Site
-							<span className='btn-icon'>
-								<Icon name='external' />
-							</span>
-						</Button>
-					</a>
-				)}
-			</div>
+			{project.projectImages.length < 1 ? (
+				<></>
+			) : (
+				<div className='project-images'>
+					<h3>SCREENSHOTS</h3>
+					<div className='screenshots'>
+						{project.projectImages.map((image) => {
+							return (
+								<Image
+									key={project.projectImages.indexOf(image)}
+									size='large'
+									src={image}
+									alt={project.projectName}
+								/>
+							);
+						})}
+					</div>
+				</div>
+			)}
 		</motion.section>
 	);
 };

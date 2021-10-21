@@ -8,13 +8,8 @@ import TextField from '@mui/material/TextField';
 import * as emailjs from 'emailjs-com';
 import SeoSettings from '../seo/SeoSettings';
 import ReactPixel from 'react-facebook-pixel';
+import { FaDev, FaGithub, FaLinkedin } from 'react-icons/fa';
 
-const pixelOptions = {
-	autoConfig: true,
-	debug: false,
-};
-
-ReactPixel.init('258173202988755', pixelOptions);
 ReactPixel.pageView();
 
 const emailjsUser = process.env.REACT_APP_EMAIL_USER;
@@ -30,6 +25,7 @@ const Contact = () => {
 	const [emailSent, setEmailSent] = useState(false);
 	const [emailSentError, setEmailSentError] = useState(false);
 	const [disabled, setDisabled] = useState(false);
+
 	const history = useHistory();
 
 	emailjs.init(emailjsUser);
@@ -118,6 +114,7 @@ const Contact = () => {
 					<span>GET</span> <span className='accent'>IN TOUCH</span>
 				</h2>
 			</div>
+
 			<div className='info-section'>
 				<div className='divider'>
 					<span className='outer-line'></span>
@@ -127,179 +124,129 @@ const Contact = () => {
 
 				<div className='personal-info'>
 					<div className='split-section'>
-						<ul className='contact'>
+						<div className='contact'>
 							<div className='m10'>
-								<li>
-									<span className='bold'>PHONE</span>
-								</li>
+								<div className='form'>
+									<div className='note'>
+										<h6>FEEL FREE TO DROP ME A LINE</h6>
+										<p>
+											If you have any suggestions, a project in mind, or just
+											want to say "Hello"... Fill out the form below and I will
+											reply shortly.
+										</p>
+									</div>
 
-								<li>
-									<a href='tel:+14067811111'>406.781.1111</a>
-								</li>
+									<form className='form-fields' onSubmit={handleSubmit}>
+										<div className='name'>
+											<TextField
+												required
+												id='filled-required'
+												label='Your Name'
+												variant='filled'
+												onChange={handleChange}
+												name='name'
+												size='small'
+												fullWidth
+												value={value.name}
+												color='warning'
+											/>
+										</div>
+										<div className='email'>
+											<TextField
+												required
+												id='filled-required'
+												label='Your Email'
+												value={value.email}
+												onChange={handleChange}
+												type='email'
+												name='email'
+												variant='filled'
+												size='small'
+												fullWidth
+												color='warning'
+											/>
+										</div>
+										<div className='text-area'>
+											<TextField
+												required
+												id='filled-multiline-static'
+												label='Your Comment...'
+												multiline
+												rows={4}
+												value={value.text}
+												onChange={handleChange}
+												name='text'
+												variant='filled'
+												fullWidth
+												color='warning'
+											/>
+										</div>
+										<div className='buttons'>
+											<Button
+												type='submit'
+												size='large'
+												className='resume-btn'
+												disabled={disabled}
+											>
+												{!emailSent ? (
+													<>
+														<span className='btn-text'>SEND MESSAGE </span>
+														<span className='btn-icon'>
+															<Icon name='send' />
+														</span>
+													</>
+												) : emailSentError ? (
+													<>
+														<span className='btn-text'>SEND ERROR </span>
+														<span className='btn-icon'>
+															<Icon name='exclamation triangle' />
+														</span>
+													</>
+												) : (
+													<>
+														<span className='btn-text'>MESSAGE SENT! </span>
+														<span className='btn-icon'>
+															<Icon name='check' />
+														</span>
+													</>
+												)}
+											</Button>
+										</div>
+									</form>
+								</div>
 							</div>
 
-							<div className='m10'>
-								<li>
-									<span className='bold'>EMAIL</span>
-								</li>
-
-								<li>
-									<a
-										href='mailto:chris@fullstackcaveman.com'
-										target='_blank'
-										rel='noreferrer noopener nofollow'
-									>
-										chris@fullstackcaveman.com
-									</a>
-								</li>
-							</div>
-
-							<div className='m10'>
-								<li>
-									<span className='bold'>LOCATION</span>
-								</li>
-
-								<li>
-									<a
-										href='https://goo.gl/maps/mNoRv1Ae2HBcvb5v5'
-										target='_blank'
-										rel='noreferrer noopener nofollow'
-									>
-										Great Falls, MT
-									</a>
-								</li>
-							</div>
-
-							<div className='m10'>
-								<li>
-									<span className='bold'>SOCIAL PROFILES</span>
-								</li>
-								<div className='socials'>
+							<div className='socials'>
+								<div id='linkedin' className='social-icon'>
 									<a
 										href='https://www.linkedin.com/in/fullstackcaveman/'
 										target='_blank'
 										rel='noreferrer noopener nofollow'
 									>
-										<Button
-											color='linkedin'
-											circular
-											icon='linkedin'
-											className='dev'
-										/>
+										<FaLinkedin className='linkedin' />
 									</a>
+								</div>
 
+								<div className='social-icon'>
 									<a
 										href='https://github.com/fullstackcaveman'
 										target='_blank'
 										rel='noreferrer'
 									>
-										<Button
-											color='grey'
-											circular
-											icon='github'
-											className='dev'
-										/>
+										<FaGithub id='github' className='github' />
 									</a>
+								</div>
+
+								<div className='social-icon'>
 									<a
 										href='https://dev.to/fullstackcaveman'
 										target='_blank'
 										rel='noreferrer'
 									>
-										<Button
-											color='black'
-											circular
-											icon='edit'
-											className='dev'
-										/>
+										<FaDev id='dev' className='dev' />
 									</a>
 								</div>
 							</div>
-						</ul>
-
-						<div className='form'>
-							<div className='note'>
-								<h6>FEEL FREE TO DROP ME A LINE</h6>
-								<p>
-									If you have any suggestions, a project in mind, or just want
-									to say "Hello"... Fill out the form below and I will reply
-									shortly.
-								</p>
-							</div>
-
-							<form className='form-fields' onSubmit={handleSubmit}>
-								<div className='name'>
-									<TextField
-										required
-										id='filled-required'
-										label='Your Name'
-										variant='filled'
-										onChange={handleChange}
-										name='name'
-										size='small'
-										fullWidth
-										value={value.name}
-									/>
-								</div>
-								<div className='email'>
-									<TextField
-										required
-										id='filled-required'
-										label='Your Email'
-										value={value.email}
-										onChange={handleChange}
-										type='email'
-										name='email'
-										variant='filled'
-										size='small'
-										fullWidth
-									/>
-								</div>
-								<div className='text-area'>
-									<TextField
-										required
-										id='filled-multiline-static'
-										label='Your Comment...'
-										multiline
-										rows={4}
-										value={value.text}
-										onChange={handleChange}
-										name='text'
-										variant='filled'
-										fullWidth
-									/>
-								</div>
-								<div className='buttons'>
-									<Button
-										type='submit'
-										size='large'
-										className='resume-btn'
-										disabled={disabled}
-									>
-										{!emailSent ? (
-											<>
-												<span className='btn-text'>SEND MESSAGE </span>
-												<span className='btn-icon'>
-													<Icon name='send' />
-												</span>
-											</>
-										) : emailSentError ? (
-											<>
-												<span className='btn-text'>SEND ERROR </span>
-												<span className='btn-icon'>
-													<Icon name='exclamation triangle' />
-												</span>
-											</>
-										) : (
-											<>
-												<span className='btn-text'>MESSAGE SENT! </span>
-												<span className='btn-icon'>
-													<Icon name='check' />
-												</span>
-											</>
-										)}
-									</Button>
-								</div>
-							</form>
 						</div>
 					</div>
 				</div>

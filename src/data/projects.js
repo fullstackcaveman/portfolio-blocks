@@ -1,27 +1,26 @@
 export const projects = [
 	{
-		id: 8,
-		projectName: "Howie's Home Inspections Website",
-		client: "Howie's Home Inspections",
-		description: "Business website for Howie's Home Inspections in Ogden, UT",
-		thumbnail:
-			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634583501/Howie%27s%20Home%20Inspections/howie-home-thumb_opcg4q.png',
-		techStack: ['HTML,', 'JavaScript,', 'SASS'],
-		gitHubLinks: [
-			'https://github.com/fullstackcaveman/howies-home-inspections',
-		],
-		deployedLink: null,
-	},
-	{
-		id: 7,
-		projectName: 'Portfolio Website',
+		id: 4,
+		projectName: 'Star Wars Universe',
 		client: 'Personal Project',
-		description: 'Personal portfolio website',
+		description: 'Browsable database of the Star Wars Universe.',
 		thumbnail:
-			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634068837/Portfolio%20Website/blocks_portfolio_thumb_ob9jd7.png',
-		techStack: ['React,', 'Semantic-UI-React,', 'SASS'],
-		gitHubLinks: ['https://github.com/fullstackcaveman/portfolio-blocks'],
-		deployedLink: 'https://fullstackcaveman.com/',
+			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634068527/Star%20Wars%20Universe/starwars_thumb_1280x900_mxlhuo.png',
+		techStack: [
+			'React,',
+			'Redux,',
+			'Node,',
+			'Express,',
+			'MongoDB,',
+			'MaterialUI,',
+			'SASS,',
+			'Heroku',
+		],
+		gitHubLinks: ['https://github.com/fullstackcaveman/star-wars-universe'],
+		deployedLink: 'http://starwars.fullstackcaveman.com/',
+		projectImages: [
+			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634067091/Star%20Wars%20Universe/star_wars_universe_home.png',
+		],
 	},
 	{
 		id: 6,
@@ -32,10 +31,15 @@ export const projects = [
 		thumbnail:
 			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634068540/Spacetagram/spacetagram_thumb_1280x900_p7vqk7.png',
 		techStack: ['React,', 'Semantic-UI-React,', 'SASS,', 'Netlify'],
-		gitHubLinks: ['https://github.com/fullstackcaveman/nasa-photo-otd-sf'],
-		deployedLink: 'https://nasa-potd.fullstackcaveman.com/',
+		gitHubLinks: ['https://github.com/fullstackcaveman/spacetagram'],
+		deployedLink: 'https://spacetagram.fullstackcaveman.com/',
+		projectImages: [
+			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634068540/Spacetagram/spacetagram_thumb_1280x900_p7vqk7.png',
+			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1632189024/Spacetagram/spacetagram-screenshot_maxois.png',
+			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1632079273/Spacetagram/spacetagram-share-photo_g4n8ue.png',
+			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1632078414/Spacetagram/spacetagram-liked-photos_fqnd6s.png',
+		],
 	},
-
 	{
 		id: 5,
 		projectName: 'Asylum Case Database',
@@ -57,28 +61,34 @@ export const projects = [
 			'https://github.com/fullstackcaveman/human-rights-first-asylum-be-a',
 		],
 		deployedLink: null,
+		projectImages: [],
 	},
 	{
-		id: 4,
-		projectName: 'Star Wars Universe',
+		id: 7,
+		projectName: 'Portfolio Website',
 		client: 'Personal Project',
-		description: 'Browsable database of the Star Wars Universe.',
+		description: 'Personal portfolio website',
 		thumbnail:
-			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634068527/Star%20Wars%20Universe/starwars_thumb_1280x900_mxlhuo.png',
-		techStack: [
-			'React,',
-			'Redux,',
-			'Node,',
-			'Express,',
-			'MongoDB,',
-			'MaterialUI,',
-			'SASS,',
-			'Heroku',
-		],
-		gitHubLinks: ['https://github.com/fullstackcaveman/star-wars-universe'],
-		deployedLink: 'http://starwars.fullstackcaveman.com/',
+			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634068837/Portfolio%20Website/blocks_portfolio_thumb_ob9jd7.png',
+		techStack: ['React,', 'Semantic-UI-React,', 'SASS'],
+		gitHubLinks: ['https://github.com/fullstackcaveman/portfolio-blocks'],
+		deployedLink: 'https://fullstackcaveman.com/',
+		projectImages: [],
 	},
-
+	{
+		id: 8,
+		projectName: "Howie's Home Inspections Website",
+		client: "Howie's Home Inspections",
+		description: "Business website for Howie's Home Inspections in Ogden, UT",
+		thumbnail:
+			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634583501/Howie%27s%20Home%20Inspections/howie-home-thumb_opcg4q.png',
+		techStack: ['HTML,', 'JavaScript,', 'SASS'],
+		gitHubLinks: [
+			'https://github.com/fullstackcaveman/howies-home-inspections',
+		],
+		deployedLink: null,
+		projectImages: [],
+	},
 	{
 		id: 3,
 		projectName: 'Dryden Wedding Website',
@@ -90,6 +100,7 @@ export const projects = [
 		techStack: ['HTML5,', 'JavaScript,', 'SASS'],
 		gitHubLinks: ['https://github.com/fullstackcaveman/dryden-wedding-html'],
 		deployedLink: 'https://drydenwedding.info/',
+		projectImages: [],
 	},
 	{
 		id: 2,
@@ -101,6 +112,7 @@ export const projects = [
 		techStack: ['HTML5,', 'CSS3'],
 		gitHubLinks: ['https://github.com/fullstackcaveman/newsgrid'],
 		deployedLink: 'https://newsgrid.fullstackcaveman.com/',
+		projectImages: [],
 	},
 	{
 		id: 1,
@@ -113,5 +125,6 @@ export const projects = [
 		techStack: ['React,', 'Styled Components'],
 		gitHubLinks: ['https://github.com/fullstackcaveman/burton-movies'],
 		deployedLink: 'https://fervent-volhard-27f0d8.netlify.app/',
+		projectImages: [],
 	},
 ];

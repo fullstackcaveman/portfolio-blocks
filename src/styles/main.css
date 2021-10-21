@@ -453,6 +453,7 @@ body > div:nth-child(6) > div .ui.button {
   margin-bottom: 10px;
 }
 .main-container .content-area .blocks .top-row .block-1 {
+  position: relative;
   margin-right: 10px;
   background-color: #111;
 }
@@ -464,6 +465,7 @@ body > div:nth-child(6) > div .ui.button {
   color: #ffb400;
 }
 .main-container .content-area .blocks .top-row .block-2 {
+  position: relative;
   margin-left: 10px;
   transition: all 0.5s ease-in-out;
 }
@@ -488,6 +490,7 @@ body > div:nth-child(6) > div .ui.button {
   margin-top: 10px;
 }
 .main-container .content-area .blocks .bottom-row .block-3 {
+  position: relative;
   margin-right: 10px;
   transition: all 0.5s ease-in-out;
 }
@@ -509,6 +512,7 @@ body > div:nth-child(6) > div .ui.button {
   color: #ffb400;
 }
 .main-container .content-area .blocks .bottom-row .block-4 {
+  position: relative;
   margin-left: 10px;
   transition: all 0.5s ease-in-out;
 }
@@ -543,6 +547,7 @@ body > div:nth-child(6) > div .ui.button {
   right: 30px;
   color: #ffb400;
   font-size: 50px;
+  z-index: 10;
 }
 .main-container .content-area .about-section .close-icon:hover {
   cursor: pointer;
@@ -605,6 +610,10 @@ body > div:nth-child(6) > div .ui.button {
   width: 100%;
 }
 .main-container .content-area .about-section .info-section .split-section .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   padding: 0;
   font-size: 20px;
@@ -619,6 +628,35 @@ body > div:nth-child(6) > div .ui.button {
 }
 .main-container .content-area .about-section .info-section .split-section .contact li a {
   color: #ffb400;
+}
+.main-container .content-area .about-section .info-section .split-section .contact li a .resume-btn {
+  display: flex;
+  justify-content: center;
+  align-items: middle;
+  color: #111;
+  background-color: #ffb400;
+  margin: 10px 0;
+  width: 250px;
+  border: 1px solid #111;
+  transition: all 0.3s ease-in-out;
+}
+.main-container .content-area .about-section .info-section .split-section .contact li a .resume-btn .btn-icon {
+  font-weight: bold;
+  margin-left: 10px;
+}
+.main-container .content-area .about-section .info-section .split-section .contact li a .resume-btn:hover {
+  background-color: #111;
+  color: #ffb400;
+  border: 1px solid #ffb400;
+}
+.main-container .content-area .about-section .info-section .split-section .contact .li-socials a {
+  color: #ffb400;
+  font-size: 2.5rem;
+  margin: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.main-container .content-area .about-section .info-section .split-section .contact .li-socials a:hover {
+  opacity: 0.6;
 }
 .main-container .content-area .about-section .info-section .split-section .buttons {
   display: flex;
@@ -681,6 +719,7 @@ body > div:nth-child(6) > div .ui.button {
   right: 30px;
   color: #ffb400;
   font-size: 50px;
+  z-index: 10;
 }
 .main-container .content-area .learning-section .close-icon:hover {
   cursor: pointer;
@@ -752,7 +791,7 @@ body > div:nth-child(6) > div .ui.button {
 .main-container .content-area .learning-section .info-section .learning-info .learning-items .certificates .certificates-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -865,6 +904,7 @@ body > div:nth-child(6) > div .ui.button {
   right: 30px;
   color: #ffb400;
   font-size: 50px;
+  z-index: 10;
 }
 .main-container .content-area .portfolio-section .close-icon:hover {
   cursor: pointer;
@@ -916,7 +956,7 @@ body > div:nth-child(6) > div .ui.button {
   width: 100%;
   height: 100%;
   transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
-  transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+  transition: transform 2s cubic-bezier(0.2, 1, 0.3, 1);
 }
 .main-container .content-area .portfolio-section .info-section .projects-info .projects .project:hover:after {
   transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
@@ -957,7 +997,7 @@ body > div:nth-child(6) > div .ui.button {
   font-weight: bold;
   transform: translateY(-20%);
   transition: opacity 400ms cubic-bezier(0.2, 1, 0.3, 1), transform 400ms cubic-bezier(0.2, 1, 0.3, 1);
-  transition-delay: 600ms;
+  transition-delay: 400ms;
 }
 .main-container .content-area .project-section {
   display: flex;
@@ -975,10 +1015,24 @@ body > div:nth-child(6) > div .ui.button {
   right: 30px;
   color: #ffb400;
   font-size: 50px;
+  z-index: 10;
 }
 .main-container .content-area .project-section .close-icon:hover {
   cursor: pointer;
   transform: rotate(360deg);
+}
+.main-container .content-area .project-section .fancy-title {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 50px;
+  padding: 10px;
+}
+.main-container .content-area .project-section .fancy-title h1 {
+  font-family: "Montserrat", sans-serif;
+  background: -webkit-linear-gradient(#ffb400, black);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .main-container .content-area .project-section .project-info {
   display: flex;
@@ -1018,28 +1072,48 @@ body > div:nth-child(6) > div .ui.button {
 .main-container .content-area .project-section .project-info .project-data .bold.mr5 {
   margin-right: 5px;
 }
-.main-container .content-area .project-section .buttons {
+.main-container .content-area .project-section .project-info .project-data .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px 0;
 }
-.main-container .content-area .project-section .buttons a {
+.main-container .content-area .project-section .project-info .project-data .buttons a {
   margin: 0 10px;
 }
-.main-container .content-area .project-section .buttons a button {
+.main-container .content-area .project-section .project-info .project-data .buttons a button {
   width: 175px;
   background-color: transparent;
   border: 1px solid #ffb400;
   color: #ffb400;
   transition: all 0.3s ease-in-out;
 }
-.main-container .content-area .project-section .buttons a button .btn-icon {
+.main-container .content-area .project-section .project-info .project-data .buttons a button .btn-icon {
   margin-left: 10px;
 }
-.main-container .content-area .project-section .buttons a button:hover {
+.main-container .content-area .project-section .project-info .project-data .buttons a button:hover {
   background-color: #ffb400;
   border: 1px solid #ffb400;
   color: #111;
+}
+.main-container .content-area .project-section .project-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.main-container .content-area .project-section .project-images h3 {
+  font-size: 2rem;
+  color: #ffb400;
+}
+.main-container .content-area .project-section .project-images .screenshots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.main-container .content-area .project-section .project-images .screenshots img {
+  margin: 10px;
 }
 .main-container .content-area .contact-section {
   display: flex;
@@ -1057,6 +1131,7 @@ body > div:nth-child(6) > div .ui.button {
   right: 30px;
   color: #ffb400;
   font-size: 50px;
+  z-index: 10;
 }
 .main-container .content-area .contact-section .close-icon:hover {
   cursor: pointer;
@@ -1103,32 +1178,103 @@ body > div:nth-child(6) > div .ui.button {
   display: flex;
 }
 .main-container .content-area .contact-section .info-section .split-section .contact {
+  position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   list-style: none;
   padding: 0;
   font-size: 20px;
-  width: 50%;
+  width: 100%;
   background-color: #222;
   padding: 10px;
   text-align: left;
   border: 1px solid #ffb400;
   border-radius: 3px;
+  overflow: hidden;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .socials {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  width: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .socials .social-icon {
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .socials .social-icon a {
+  position: relative;
+  margin: 8px auto;
+  transition: all 0.3s ease-in-out;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .socials .social-icon a .dev,
+.main-container .content-area .contact-section .info-section .split-section .contact .socials .social-icon a .linkedin,
+.main-container .content-area .contact-section .info-section .split-section .contact .socials .social-icon a .github {
+  position: absolute;
+  right: -70px;
+  font-size: 3rem;
+  color: #ffb400;
+  transform: rotate(-45deg);
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .socials .social-icon a .dev:hover,
+.main-container .content-area .contact-section .info-section .split-section .contact .socials .social-icon a .linkedin:hover,
+.main-container .content-area .contact-section .info-section .split-section .contact .socials .social-icon a .github:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: rotate(0deg);
+  right: -50px;
 }
 .main-container .content-area .contact-section .info-section .split-section .contact .m10 {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 10px;
+  width: 100%;
 }
-.main-container .content-area .contact-section .info-section .split-section .contact .m10 .socials a {
-  margin: 0 5px;
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-.main-container .content-area .contact-section .info-section .split-section .contact .m10 .socials a .dev {
-  transition: all 0.3s ease-in-out;
-  border: 1px solid #ffb400;
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 .form .note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 .form .note h6 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  margin: 20px 0;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 .form .note p {
+  width: 100%;
+  margin: 20px 0;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 .form .form-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 .form .form-fields .name .MuiFormControl-root .MuiInputLabel-root,
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 .form .form-fields .email .MuiFormControl-root .MuiInputLabel-root,
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 .form .form-fields .text-area .MuiFormControl-root .MuiInputLabel-root {
+  color: #ffb400;
+}
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 .form .form-fields .buttons {
+  width: 100%;
 }
 .main-container .content-area .contact-section .info-section .split-section .contact .m10 li {
   padding-bottom: 5px;
@@ -1139,44 +1285,6 @@ body > div:nth-child(6) > div .ui.button {
 }
 .main-container .content-area .contact-section .info-section .split-section .contact .m10 li a {
   color: #ffb400;
-}
-.main-container .content-area .contact-section .info-section .split-section .form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  margin: 20px auto;
-  padding: 20px;
-}
-.main-container .content-area .contact-section .info-section .split-section .form .note {
-  width: 100%;
-}
-.main-container .content-area .contact-section .info-section .split-section .form .note h6 {
-  margin: 0;
-  margin-bottom: 20px;
-}
-.main-container .content-area .contact-section .info-section .split-section .form .form-fields {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.main-container .content-area .contact-section .info-section .split-section .form .form-fields .name,
-.main-container .content-area .contact-section .info-section .split-section .form .form-fields .email,
-.main-container .content-area .contact-section .info-section .split-section .form .form-fields .text-area {
-  display: flex;
-  width: 100%;
-  margin: 5px auto;
-}
-.main-container .content-area .contact-section .info-section .split-section .form .form-fields .name .MuiFilledInput-root,
-.main-container .content-area .contact-section .info-section .split-section .form .form-fields .name label,
-.main-container .content-area .contact-section .info-section .split-section .form .form-fields .email .MuiFilledInput-root,
-.main-container .content-area .contact-section .info-section .split-section .form .form-fields .email label,
-.main-container .content-area .contact-section .info-section .split-section .form .form-fields .text-area .MuiFilledInput-root,
-.main-container .content-area .contact-section .info-section .split-section .form .form-fields .text-area label {
-  color: #efe9e9;
 }
 .main-container .content-area .contact-section .info-section .split-section .buttons {
   display: flex;
@@ -1246,6 +1354,15 @@ body > div:nth-child(6) > div .ui.button {
     width: 100%;
     margin-left: 20px;
   }
+  .main-container .content-area .project-section .fancy-title {
+    margin-bottom: 20px;
+  }
+  .main-container .content-area .project-section .project-info .project-data .buttons {
+    flex-direction: column;
+  }
+  .main-container .content-area .project-section .project-info .project-data .buttons a {
+    margin: 10px 0;
+  }
   .main-container .content-area .contact-section .info-section .personal-info .split-section .form .note h6 {
     font-size: 2rem;
   }
@@ -1300,35 +1417,36 @@ body > div:nth-child(6) > div .ui.button {
   .main-container .content-area .learning-section .page-title {
     margin-top: 50px;
   }
+  .main-container .content-area .project-section .fancy-title h1 {
+    margin-top: 20px;
+    font-size: 2.5rem;
+  }
   .main-container .content-area .project-section .project-info {
     flex-direction: column;
   }
   .main-container .content-area .project-section .project-info .project-image {
     margin: 0;
+    margin-bottom: 30px;
     width: 80%;
   }
   .main-container .content-area .project-section .project-info .project-data {
     width: 100%;
   }
-  .main-container .content-area .project-section .project-info .project-data h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-top: 20px;
-  }
   .main-container .content-area .contact-section .info-section .personal-info .split-section {
     flex-direction: column;
     align-items: center;
   }
-  .main-container .content-area .contact-section .info-section .personal-info .split-section .form {
+  .main-container .content-area .contact-section .info-section .personal-info .split-section .contact .m10 .form {
     width: 100%;
   }
-  .main-container .content-area .contact-section .info-section .personal-info .split-section .form .note {
+  .main-container .content-area .contact-section .info-section .personal-info .split-section .contact .m10 .form .note {
     margin-bottom: 20px;
   }
-  .main-container .content-area .contact-section .info-section .personal-info .split-section .form .note h6 {
+  .main-container .content-area .contact-section .info-section .personal-info .split-section .contact .m10 .form .note h6 {
     font-size: 2rem;
+    line-height: 1.1;
   }
-  .main-container .content-area .contact-section .info-section .personal-info .split-section .form .note p {
+  .main-container .content-area .contact-section .info-section .personal-info .split-section .contact .m10 .form .note p {
     font-size: 15px;
   }
 }
@@ -1375,6 +1493,9 @@ body > div:nth-child(6) > div .ui.button {
   .main-container .content-area .portfolio-section .info-section {
     width: 90%;
   }
+  .main-container .content-area .project-section .fancy-title h1 {
+    font-size: 2rem;
+  }
   .main-container .content-area .project-section .close-icon {
     font-size: 2.5rem;
   }
@@ -1384,8 +1505,8 @@ body > div:nth-child(6) > div .ui.button {
     margin-top: 30px;
   }
   .main-container .content-area .project-section .project-info .project-image {
-    margin: 0;
-    width: 80%;
+    margin-bottom: 20px;
+    width: 85%;
   }
   .main-container .content-area .project-section .project-info .project-data {
     width: 100%;
@@ -1446,6 +1567,9 @@ body > div:nth-child(6) > div .ui.button {
   .main-container .content-area .about-section .info-section .personal-info .split-section .contact {
     font-size: 1.3rem;
   }
+  .main-container .content-area .contact-section .info-section .personal-info .split-section .contact .m10 .form {
+    padding: 5px;
+  }
 }
 @media (max-width: 320px) {
   .main-container .content-area .blocks .top-row .block-1 .block-1-content .typewriter {
@@ -1466,6 +1590,9 @@ body > div:nth-child(6) > div .ui.button {
   .main-container .content-area .about-section .info-section .personal-info h6 {
     font-size: 2rem;
   }
+  .main-container .content-area .project-section .fancy-title h1 {
+    font-size: 1.5rem;
+  }
   .main-container .content-area .project-section .project-info .project-data h2 {
     font-size: 2rem;
   }
@@ -1478,12 +1605,13 @@ body > div:nth-child(6) > div .ui.button {
   .main-container .content-area .contact-section .info-section .personal-info .split-section .contact {
     font-size: 15px;
   }
-  .main-container .content-area .contact-section .info-section .personal-info .split-section .form {
+  .main-container .content-area .contact-section .info-section .personal-info .split-section .contact .m10 .form {
     padding: 0;
-    margin-top: 40px;
+    margin-top: 10px;
   }
-  .main-container .content-area .contact-section .info-section .personal-info .split-section .form .note h6 {
+  .main-container .content-area .contact-section .info-section .personal-info .split-section .contact .m10 .form .note h6 {
     font-size: 1.3rem;
+    margin: 0;
   }
 }
 

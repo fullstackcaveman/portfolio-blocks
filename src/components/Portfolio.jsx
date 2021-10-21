@@ -9,12 +9,6 @@ import SeoSettings from '../seo/SeoSettings';
 import { Link } from 'react-router-dom';
 import ReactPixel from 'react-facebook-pixel';
 
-const pixelOptions = {
-	autoConfig: true,
-	debug: false,
-};
-
-ReactPixel.init('258173202988755', pixelOptions);
 ReactPixel.pageView();
 
 const Portfolio = () => {

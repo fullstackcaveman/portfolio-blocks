@@ -8,12 +8,6 @@ import ReactPixel from 'react-facebook-pixel';
 import { certificates } from '../data/certificates';
 import { badges } from '../data/badges';
 
-const pixelOptions = {
-	autoConfig: true,
-	debug: false,
-};
-
-ReactPixel.init('258173202988755', pixelOptions);
 ReactPixel.pageView();
 
 const LearningHistory = () => {
@@ -118,6 +112,7 @@ const LearningHistory = () => {
 								{badges.map((badge) => {
 									return (
 										<Popup
+											key={badge.id}
 											className='badge-verify'
 											hoverable
 											clickable

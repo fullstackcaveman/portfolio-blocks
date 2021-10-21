@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { useHistory } from 'react-router';
 import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import { FaIdCard } from 'react-icons/fa';
-import { BsPersonBoundingBox } from 'react-icons/bs';
+import { FaDev, FaIdCard } from 'react-icons/fa';
+import { BsGithub, BsLinkedin, BsPersonBoundingBox } from 'react-icons/bs';
 import { IoMdSchool } from 'react-icons/io';
 import { ImFilePdf } from 'react-icons/im';
 import { FaRegEdit } from 'react-icons/fa';
@@ -12,12 +12,6 @@ import SeoSettings from '../seo/SeoSettings';
 import ReactPixel from 'react-facebook-pixel';
 import { Link } from 'react-router-dom';
 
-const pixelOptions = {
-	autoConfig: true,
-	debug: false,
-};
-
-ReactPixel.init('258173202988755', pixelOptions);
 ReactPixel.pageView();
 
 const About = () => {
@@ -95,46 +89,33 @@ const About = () => {
 					<div className='split-section'>
 						<ul className='contact'>
 							<li>
-								<span className='bold'>First Name: </span> Chris
+								<Link to='/contact'>
+									<Button size='large' className='resume-btn'>
+										<span className='btn-text'>CONTACT</span>
+									</Button>
+								</Link>
 							</li>
-							<li>
-								<span className='bold'>Last Name: </span> Burton
-							</li>
-							<li>
-								<span className='bold'>Phone: </span>
-								<a href='tel:+14067811111'>406.781.1111</a>
-							</li>
-							<li>
-								<span className='bold'>Location: </span> Great Falls, MT
-							</li>
-							<li>
-								<span className='bold'>Email: </span>{' '}
-								<a
-									href='mailto:chris@fullstackcaveman.com'
-									target='_blank'
-									rel='noreferrer'
-								>
-									chris@fullstackcaveman.com
-								</a>
-							</li>
-							<li>
-								<span className='bold'>Linkedin: </span>
+							<li className='li-socials'>
 								<a
 									href='https://www.linkedin.com/in/fullstackcaveman/'
 									target='_blank'
-									rel='noreferrer'
+									rel='nofollow noreferrer noopener'
 								>
-									FullStackCaveman
+									<BsLinkedin />
 								</a>
-							</li>
-							<li>
-								<span className='bold'>GitHub: </span>
 								<a
 									href='https://github.com/fullstackcaveman'
 									target='_blank'
 									rel='noreferrer'
 								>
-									FullStackCaveman
+									<BsGithub />
+								</a>
+								<a
+									href='https://dev.to/fullstackcaveman'
+									target='_blank'
+									rel='nofollow noreferrer noopener'
+								>
+									<FaDev />
 								</a>
 							</li>
 						</ul>
@@ -142,7 +123,7 @@ const About = () => {
 							<a
 								href='https://drive.google.com/file/d/16KsgJFupGd1oMz2lpqV_F0UZ-gdmrAwp/view?usp=sharing'
 								target='_blank'
-								rel='noopener noreferrer'
+								rel='nofollow noreferrer noopener'
 							>
 								<Button size='large' className='resume-btn'>
 									<span className='btn-text'>DOWNLOAD RESUME </span>

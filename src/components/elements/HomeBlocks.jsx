@@ -30,16 +30,16 @@ const HomeBlocks = () => {
 				</div>
 				<Link to='/about' className='block-2'>
 					<h2>
-						<span className='white'>ABOUT</span>{' '}
-						<span className='accent'>ME</span>
+						<span className='white'>LEARN</span>{' '}
+						<span className='accent'>ABOUT ME</span>
 					</h2>
 				</Link>
 			</div>
 			<div className='bottom-row'>
 				<Link to='/portfolio' className='block-3'>
 					<h2>
-						<span className='white'>MY</span>{' '}
-						<span className='accent'>PORTFOLIO</span>
+						<span className='white'>VIEW</span>{' '}
+						<span className='accent'>MY WORK</span>
 					</h2>
 				</Link>
 				<Link to='/contact' className='block-4'>
