@@ -17,7 +17,7 @@ export const projects = [
 			'Heroku',
 		],
 		gitHubLinks: ['https://github.com/fullstackcaveman/star-wars-universe'],
-		deployedLink: 'http://starwars.fullstackcaveman.com/',
+		deployedLink: 'https://starwars.fullstackcaveman.com/',
 		projectImages: [
 			'https://res.cloudinary.com/fullstackcaveman/image/upload/v1634067091/Star%20Wars%20Universe/star_wars_universe_home.png',
 		],
