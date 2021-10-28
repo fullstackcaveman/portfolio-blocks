@@ -935,7 +935,6 @@ body > div:nth-child(6) > div {
 		}
 
 		.contact-section {
-			// position: absolute;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -1113,6 +1112,9 @@ body > div:nth-child(6) > div {
 									.text-area {
 										.MuiFormControl-root {
 											.MuiInputLabel-root {
+												color: $accent-color;
+											}
+											.MuiFilledInput-root {
 												color: $accent-color;
 											}
 										}

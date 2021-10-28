@@ -1273,6 +1273,11 @@ body > div:nth-child(6) > div .ui.button {
 .main-container .content-area .contact-section .info-section .split-section .contact .m10 .form .form-fields .text-area .MuiFormControl-root .MuiInputLabel-root {
   color: #ffb400;
 }
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 .form .form-fields .name .MuiFormControl-root .MuiFilledInput-root,
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 .form .form-fields .email .MuiFormControl-root .MuiFilledInput-root,
+.main-container .content-area .contact-section .info-section .split-section .contact .m10 .form .form-fields .text-area .MuiFormControl-root .MuiFilledInput-root {
+  color: #ffb400;
+}
 .main-container .content-area .contact-section .info-section .split-section .contact .m10 .form .form-fields .buttons {
   width: 100%;
 }
