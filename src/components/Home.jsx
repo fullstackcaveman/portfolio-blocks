@@ -10,6 +10,7 @@ import Contact from './Contact';
 import LearningHistory from './LearningHistory';
 import { useState } from 'react';
 import { Button, Popup } from 'semantic-ui-react';
+import WebsiteQuestionnaire from './WebsiteQuestionnaire';
 
 const Home = () => {
 	const [currentScore, setCurrentScore] = useState(0);
@@ -83,6 +84,10 @@ const Home = () => {
 						<Route path='/portfolio/:id'>{setProject()}</Route>
 						<Route path='/portfolio' component={Portfolio} />
 						<Route path='/contact' component={Contact} />
+						<Route
+							path='/website-questionnaire'
+							component={WebsiteQuestionnaire}
+						/>
 					</Switch>
 				</AnimatePresence>
 			</div>
