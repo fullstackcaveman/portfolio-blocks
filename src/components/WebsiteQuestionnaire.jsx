@@ -65,6 +65,8 @@ const WebsiteQuestionnaire = () => {
 	const [disabled, setDisabled] = useState(false);
 	const [newOrUpdateWebsite, setNewOrUpdateWebsite] = useState('newWebsite');
 
+	console.log(value);
+
 	const history = useHistory();
 
 	emailjs.init(emailjsUser);
@@ -123,21 +125,21 @@ const WebsiteQuestionnaire = () => {
 		if (e.target.value === 'Yes') {
 			setValue({
 				...value,
-				[item]: true,
+				[item]: 'Selected',
 				[e.target.name + 'No']: false,
 				[e.target.name + 'Maybe']: false,
 			});
 		} else if (e.target.value === 'No') {
 			setValue({
 				...value,
-				[item]: true,
+				[item]: 'Selected',
 				[e.target.name + 'Yes']: false,
 				[e.target.name + 'Maybe']: false,
 			});
 		} else if (e.target.value === 'Maybe') {
 			setValue({
 				...value,
-				[item]: true,
+				[item]: 'Selected',
 				[e.target.name + 'Yes']: false,
 				[e.target.name + 'No']: false,
 			});
@@ -146,9 +148,11 @@ const WebsiteQuestionnaire = () => {
 
 	const handleEmailSuccess = () => {
 		setEmailSent(true);
+		setValue(initialValues);
 		setTimeout(() => {
 			setEmailSent(false);
 			setDisabled(true);
+			history.push('/');
 		}, 5000);
 	};
 
@@ -158,7 +162,7 @@ const WebsiteQuestionnaire = () => {
 		emailjs
 			.sendForm(
 				'service_phym552',
-				'template_m3f2yei',
+				'template_1of61ih',
 				'.form-fields',
 				emailjsUser
 			)
@@ -171,8 +175,6 @@ const WebsiteQuestionnaire = () => {
 					console.error('Failed...', err);
 				}
 			);
-
-		setValue(initialValues);
 	};
 
 	return (
@@ -628,6 +630,7 @@ const WebsiteQuestionnaire = () => {
 													onClick={handleYesNoMaybe}
 												>
 													<FormControlLabel
+														name='Yes'
 														value='Yes'
 														control={
 															<Radio
@@ -640,6 +643,7 @@ const WebsiteQuestionnaire = () => {
 														label='Yes'
 													/>
 													<FormControlLabel
+														name='No'
 														value='No'
 														control={
 															<Radio
@@ -652,6 +656,7 @@ const WebsiteQuestionnaire = () => {
 														label='No'
 													/>
 													<FormControlLabel
+														name='Maybe'
 														value='Maybe'
 														control={
 															<Radio
@@ -719,6 +724,7 @@ const WebsiteQuestionnaire = () => {
 												</FormLabel>
 												<RadioGroup row name='host' onClick={handleYesNoMaybe}>
 													<FormControlLabel
+														name='Yes'
 														value='Yes'
 														control={
 															<Radio
@@ -731,6 +737,7 @@ const WebsiteQuestionnaire = () => {
 														label='Yes'
 													/>
 													<FormControlLabel
+														name='No'
 														value='No'
 														control={
 															<Radio
@@ -743,6 +750,7 @@ const WebsiteQuestionnaire = () => {
 														label='No'
 													/>
 													<FormControlLabel
+														name='Maybe'
 														value='Maybe'
 														control={
 															<Radio
@@ -848,6 +856,7 @@ const WebsiteQuestionnaire = () => {
 												</FormLabel>
 												<RadioGroup row name='seo' onClick={handleYesNoMaybe}>
 													<FormControlLabel
+														name='Yes'
 														value='Yes'
 														control={
 															<Radio
@@ -860,6 +869,7 @@ const WebsiteQuestionnaire = () => {
 														label='Yes'
 													/>
 													<FormControlLabel
+														name='No'
 														value='No'
 														control={
 															<Radio
@@ -872,6 +882,7 @@ const WebsiteQuestionnaire = () => {
 														label='No'
 													/>
 													<FormControlLabel
+														name='Maybe'
 														value='Maybe'
 														control={
 															<Radio
