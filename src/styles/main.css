@@ -1415,43 +1415,6 @@ body > div:nth-child(6) > div .ui.button {
   border-radius: 3px;
   overflow: hidden;
 }
-.main-container .content-area .web-questionnaire-section .info-section .split-section .contact .socials {
-  position: absolute;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  height: 40%;
-  width: 50px;
-  transition: all 0.3s ease-in-out;
-}
-.main-container .content-area .web-questionnaire-section .info-section .split-section .contact .socials .social-icon {
-  height: 100%;
-  transition: all 0.3s ease-in-out;
-}
-.main-container .content-area .web-questionnaire-section .info-section .split-section .contact .socials .social-icon a {
-  position: relative;
-  margin: 8px auto;
-  transition: all 0.3s ease-in-out;
-}
-.main-container .content-area .web-questionnaire-section .info-section .split-section .contact .socials .social-icon a .dev,
-.main-container .content-area .web-questionnaire-section .info-section .split-section .contact .socials .social-icon a .linkedin,
-.main-container .content-area .web-questionnaire-section .info-section .split-section .contact .socials .social-icon a .github {
-  position: absolute;
-  right: -70px;
-  font-size: 3rem;
-  color: #ffb400;
-  transform: rotate(-45deg);
-  opacity: 0.5;
-  transition: all 0.3s ease-in-out;
-}
-.main-container .content-area .web-questionnaire-section .info-section .split-section .contact .socials .social-icon a .dev:hover,
-.main-container .content-area .web-questionnaire-section .info-section .split-section .contact .socials .social-icon a .linkedin:hover,
-.main-container .content-area .web-questionnaire-section .info-section .split-section .contact .socials .social-icon a .github:hover {
-  cursor: pointer;
-  opacity: 1;
-  transform: rotate(0deg);
-  right: -50px;
-}
 .main-container .content-area .web-questionnaire-section .info-section .split-section .contact .m10 {
   display: flex;
   flex-direction: column;
@@ -1545,7 +1508,7 @@ body > div:nth-child(6) > div .ui.button {
   justify-content: center;
   width: 50%;
 }
-.main-container .content-area .web-questionnaire-section .info-section .split-section .buttons .resume-btn {
+.main-container .content-area .web-questionnaire-section .info-section .split-section .buttons .send-btn {
   display: flex;
   justify-content: center;
   align-items: middle;
@@ -1556,32 +1519,14 @@ body > div:nth-child(6) > div .ui.button {
   border: 1px solid #111;
   transition: all 0.3s ease-in-out;
 }
-.main-container .content-area .web-questionnaire-section .info-section .split-section .buttons .resume-btn .btn-icon {
+.main-container .content-area .web-questionnaire-section .info-section .split-section .buttons .send-btn .btn-icon {
   font-weight: bold;
   margin-left: 10px;
 }
-.main-container .content-area .web-questionnaire-section .info-section .split-section .buttons .resume-btn:hover {
+.main-container .content-area .web-questionnaire-section .info-section .split-section .buttons .send-btn:hover {
   background-color: #111;
   color: #ffb400;
   border: 1px solid #ffb400;
-}
-.main-container .content-area .web-questionnaire-section .info-section .split-section .buttons .blog-btn {
-  display: flex;
-  justify-content: center;
-  align-items: middle;
-  color: #ffb400;
-  background-color: transparent;
-  border: 1px solid #ffb400;
-  margin: 10px 0;
-  width: 250px;
-}
-.main-container .content-area .web-questionnaire-section .info-section .split-section .buttons .blog-btn .btn-icon {
-  font-weight: bold;
-  margin-left: 10px;
-}
-.main-container .content-area .web-questionnaire-section .info-section .split-section .buttons .blog-btn:hover {
-  background-color: #ffb400;
-  color: #111;
 }
 
 @media (max-width: 1460px) {
@@ -1699,6 +1644,12 @@ body > div:nth-child(6) > div .ui.button {
   }
   .main-container .content-area .contact-section .info-section .personal-info .split-section .contact .m10 .form .note p {
     font-size: 15px;
+  }
+  .main-container .content-area .web-questionnaire-section .close-icon {
+    font-size: 2rem;
+  }
+  .main-container .content-area .web-questionnaire-section .page-title h2 {
+    font-size: 2rem;
   }
 }
 @media (max-width: 415px) {

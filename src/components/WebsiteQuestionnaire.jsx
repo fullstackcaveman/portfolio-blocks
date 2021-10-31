@@ -209,8 +209,9 @@ const WebsiteQuestionnaire = () => {
 											understanding of your project.
 										</p>
 										<p>
-											Click on item's <span>&#x1F6C8;</span> icon for more
-											information
+											Click on item's{' '}
+											<span style={{ color: 'teal' }}>&#x1F6C8;</span> icon for
+											more information
 										</p>
 									</div>
 
@@ -595,6 +596,10 @@ const WebsiteQuestionnaire = () => {
 													Would You Like Us to Provide Ongoing Support and
 													Maintenance?{' '}
 													<Popup
+														style={{
+															border: '2px solid #ffb400',
+														}}
+														inverted
 														hoverable
 														position='top center'
 														size='small'
@@ -666,6 +671,10 @@ const WebsiteQuestionnaire = () => {
 												<FormLabel component='legend'>
 													Would you like us to host your website?{' '}
 													<Popup
+														style={{
+															border: '2px solid #ffb400',
+														}}
+														inverted
 														hoverable
 														position='top center'
 														size='small'
@@ -753,6 +762,10 @@ const WebsiteQuestionnaire = () => {
 													Are You Interested In Our Search Engine Optimization
 													Services?{' '}
 													<Popup
+														style={{
+															border: '2px solid #ffb400',
+														}}
+														inverted
 														hoverable
 														position='top center'
 														size='small'
@@ -917,7 +930,7 @@ const WebsiteQuestionnaire = () => {
 											<Button
 												type='submit'
 												size='large'
-												className='resume-btn'
+												className='send-btn'
 												disabled={disabled}
 											>
 												{!emailSent ? (
