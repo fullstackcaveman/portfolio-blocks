@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useHistory } from 'react-router';
 import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
@@ -23,8 +23,6 @@ const initialValues = {
 	companyName: '',
 	name: '',
 	email: '',
-	newWebsite: true,
-	websiteRedesign: false,
 	businessDescription: '',
 	servicesOffered: '',
 	targetAudience: '',
@@ -39,21 +37,20 @@ const initialValues = {
 	budget: '',
 	launchDate: '',
 	anythingElse: '',
+	newWebsite: true,
+	websiteRedesign: false,
 	cta: false,
 	chat: false,
 	social: false,
 	banners: false,
 	reviews: false,
 	otherBox: false,
-	supportYes: false,
+	supportYes: true,
 	supportNo: false,
-	supportMaybe: false,
-	hostYes: false,
+	hostYes: true,
 	hostNo: false,
-	hostMaybe: false,
-	seoYes: false,
+	seoYes: true,
 	seoNo: false,
-	seoMaybe: false,
 	acceptPayments: false,
 	eCommerce: false,
 };
@@ -64,8 +61,9 @@ const WebsiteQuestionnaire = () => {
 	const [emailSentError, setEmailSentError] = useState(false);
 	const [disabled, setDisabled] = useState(false);
 	const [newOrUpdateWebsite, setNewOrUpdateWebsite] = useState('newWebsite');
-
-	console.log(value);
+	const [supportSelection, setSupportSelection] = useState('supportYes');
+	const [hostingSelection, setHostingSelection] = useState('hostYes');
+	const [seoSelection, setSeoSelection] = useState('seoYes');
 
 	const history = useHistory();
 
@@ -74,6 +72,8 @@ const WebsiteQuestionnaire = () => {
 	const handleClose = () => {
 		history.push('/');
 	};
+
+	const form = useRef();
 
 	useEffect(() => {
 		document.title = `FullStackCaveman | Website Questionnaire`;
@@ -119,30 +119,28 @@ const WebsiteQuestionnaire = () => {
 		setNewOrUpdateWebsite(e.target.value);
 	};
 
-	const handleYesNoMaybe = (e) => {
-		const item = e.target.name + e.target.value;
-
-		if (e.target.value === 'Yes') {
+	const handleYesNo = (e) => {
+		if (e.target.value.includes('support')) {
 			setValue({
 				...value,
-				[item]: 'Selected',
-				[e.target.name + 'No']: false,
-				[e.target.name + 'Maybe']: false,
+				supportYes: !value.supportYes,
+				supportNo: !value.supportNo,
 			});
-		} else if (e.target.value === 'No') {
+			setSupportSelection(e.target.value);
+		} else if (e.target.value.includes('host')) {
 			setValue({
 				...value,
-				[item]: 'Selected',
-				[e.target.name + 'Yes']: false,
-				[e.target.name + 'Maybe']: false,
+				hostYes: !value.hostYes,
+				hostNo: !value.hostNo,
 			});
-		} else if (e.target.value === 'Maybe') {
+			setHostingSelection(e.target.value);
+		} else if (e.target.value.includes('seo')) {
 			setValue({
 				...value,
-				[item]: 'Selected',
-				[e.target.name + 'Yes']: false,
-				[e.target.name + 'No']: false,
+				seoYes: !value.seoYes,
+				seoNo: !value.seoNo,
 			});
+			setSeoSelection(e.target.value);
 		}
 	};
 
@@ -151,26 +149,26 @@ const WebsiteQuestionnaire = () => {
 		setValue(initialValues);
 		setTimeout(() => {
 			setEmailSent(false);
-			setDisabled(true);
 			history.push('/');
-		}, 5000);
+		}, 2000);
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		setDisabled(true);
 
 		emailjs
 			.sendForm(
 				'service_phym552',
 				'template_1of61ih',
-				'.form-fields',
+				form.current,
 				emailjsUser
 			)
 			.then(
 				(res) => {
 					handleEmailSuccess();
 				},
-				function (err) {
+				(err) => {
 					setEmailSentError(true);
 					console.error('Failed...', err);
 				}
@@ -211,12 +209,16 @@ const WebsiteQuestionnaire = () => {
 											understanding of your project.
 										</p>
 										<p>
-											Click each item's <span>&#x1F6C8;</span> icon for more
+											Click on item's <span>&#x1F6C8;</span> icon for more
 											information
 										</p>
 									</div>
 
-									<form className='form-fields' onSubmit={handleSubmit}>
+									<form
+										ref={form}
+										className='form-fields'
+										onSubmit={handleSubmit}
+									>
 										<div className='input-field'>
 											<TextField
 												required
@@ -627,11 +629,12 @@ const WebsiteQuestionnaire = () => {
 												<RadioGroup
 													row
 													name='support'
-													onClick={handleYesNoMaybe}
+													value={supportSelection}
+													onChange={handleYesNo}
 												>
 													<FormControlLabel
-														name='Yes'
-														value='Yes'
+														name='supportYes'
+														value='supportYes'
 														control={
 															<Radio
 																sx={{
@@ -643,8 +646,8 @@ const WebsiteQuestionnaire = () => {
 														label='Yes'
 													/>
 													<FormControlLabel
-														name='No'
-														value='No'
+														name='supportNo'
+														value='supportNo'
 														control={
 															<Radio
 																sx={{
@@ -654,19 +657,6 @@ const WebsiteQuestionnaire = () => {
 															/>
 														}
 														label='No'
-													/>
-													<FormControlLabel
-														name='Maybe'
-														value='Maybe'
-														control={
-															<Radio
-																sx={{
-																	color: amber[700],
-																	'&.Mui-checked': { color: amber[700] },
-																}}
-															/>
-														}
-														label='Maybe'
 													/>
 												</RadioGroup>
 											</FormControl>
@@ -722,10 +712,15 @@ const WebsiteQuestionnaire = () => {
 														}
 													/>
 												</FormLabel>
-												<RadioGroup row name='host' onClick={handleYesNoMaybe}>
+												<RadioGroup
+													row
+													name='host'
+													value={hostingSelection}
+													onChange={handleYesNo}
+												>
 													<FormControlLabel
-														name='Yes'
-														value='Yes'
+														name='hostYes'
+														value='hostYes'
 														control={
 															<Radio
 																sx={{
@@ -737,8 +732,8 @@ const WebsiteQuestionnaire = () => {
 														label='Yes'
 													/>
 													<FormControlLabel
-														name='No'
-														value='No'
+														name='hostNo'
+														value='hostNo'
 														control={
 															<Radio
 																sx={{
@@ -748,19 +743,6 @@ const WebsiteQuestionnaire = () => {
 															/>
 														}
 														label='No'
-													/>
-													<FormControlLabel
-														name='Maybe'
-														value='Maybe'
-														control={
-															<Radio
-																sx={{
-																	color: amber[700],
-																	'&.Mui-checked': { color: amber[700] },
-																}}
-															/>
-														}
-														label='Maybe'
 													/>
 												</RadioGroup>
 											</FormControl>
@@ -854,10 +836,15 @@ const WebsiteQuestionnaire = () => {
 														}
 													/>
 												</FormLabel>
-												<RadioGroup row name='seo' onClick={handleYesNoMaybe}>
+												<RadioGroup
+													row
+													name='seo'
+													value={seoSelection}
+													onChange={handleYesNo}
+												>
 													<FormControlLabel
-														name='Yes'
-														value='Yes'
+														name='seoYes'
+														value='seoYes'
 														control={
 															<Radio
 																sx={{
@@ -869,8 +856,8 @@ const WebsiteQuestionnaire = () => {
 														label='Yes'
 													/>
 													<FormControlLabel
-														name='No'
-														value='No'
+														name='seoNo'
+														value='seoNo'
 														control={
 															<Radio
 																sx={{
@@ -880,19 +867,6 @@ const WebsiteQuestionnaire = () => {
 															/>
 														}
 														label='No'
-													/>
-													<FormControlLabel
-														name='Maybe'
-														value='Maybe'
-														control={
-															<Radio
-																sx={{
-																	color: amber[700],
-																	'&.Mui-checked': { color: amber[700] },
-																}}
-															/>
-														}
-														label='Maybe'
 													/>
 												</RadioGroup>
 											</FormControl>
@@ -973,38 +947,6 @@ const WebsiteQuestionnaire = () => {
 									</form>
 								</div>
 							</div>
-
-							{/* <div className='socials'>
-								<div id='linkedin' className='social-icon'>
-									<a
-										href='https://www.linkedin.com/in/fullstackcaveman/'
-										target='_blank'
-										rel='noreferrer noopener nofollow'
-									>
-										<FaLinkedin className='linkedin' />
-									</a>
-								</div>
-
-								<div className='social-icon'>
-									<a
-										href='https://github.com/fullstackcaveman'
-										target='_blank'
-										rel='noreferrer'
-									>
-										<FaGithub id='github' className='github' />
-									</a>
-								</div>
-
-								<div className='social-icon'>
-									<a
-										href='https://dev.to/fullstackcaveman'
-										target='_blank'
-										rel='noreferrer'
-									>
-										<FaDev id='dev' className='dev' />
-									</a>
-								</div>
-							</div> */}
 						</div>
 					</div>
 				</div>

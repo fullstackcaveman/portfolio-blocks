@@ -121,7 +121,7 @@ const About = () => {
 						</ul>
 						<div className='buttons'>
 							<a
-								href='https://drive.google.com/file/d/1HuC39fo8DCLGvldduwdNQkZ8ltmS5LM7/view?usp=sharing'
+								href='https://drive.google.com/file/d/1BQoPij-VfuFWdIAWb5BQjWNsfYwagrpM/view?usp=sharing'
 								target='_blank'
 								rel='nofollow noreferrer noopener'
 							>
