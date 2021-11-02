@@ -510,8 +510,8 @@ const WebsiteQuestionnaire = () => {
 										<div className='input-field'>
 											<FormGroup>
 												<FormLabel component='legend'>
-													What Are Two or Three of Your Favorite Websites in
-													your type of business?
+													List Two or Three of Your Favorite Websites in your
+													type of business:
 												</FormLabel>
 												<FormGroup>
 													<TextField
