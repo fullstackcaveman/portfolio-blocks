@@ -30,8 +30,8 @@ const HomeBlocks = () => {
 				</div>
 				<Link to='/about' className='block-2'>
 					<h2>
-						<span className='white'>HIRE</span>{' '}
-						<span className='accent'>ME</span>
+						<span className='white'>WORK</span>{' '}
+						<span className='accent'>WITH ME</span>
 					</h2>
 				</Link>
 			</div>
