@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { BsFillBriefcaseFill } from 'react-icons/bs';
@@ -7,15 +7,15 @@ import { projects } from '../data/projects';
 import { Image } from 'semantic-ui-react';
 import SeoSettings from '../seo/SeoSettings';
 import { Link } from 'react-router-dom';
-import ReactPixel from 'react-facebook-pixel';
+// import ReactPixel from 'react-facebook-pixel';
 
-ReactPixel.pageView();
+// ReactPixel.pageView();
 
 const Portfolio = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const handleClose = () => {
-		history.push('/');
+		navigate('/');
 	};
 
 	const handleUrl = (project) => {

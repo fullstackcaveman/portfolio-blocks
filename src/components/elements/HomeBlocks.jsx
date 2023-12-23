@@ -2,15 +2,15 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Block1 from './Block1';
 import { useEffect } from 'react';
-import ReactPixel from 'react-facebook-pixel';
+// import ReactPixel from 'react-facebook-pixel';
 
 const pixelOptions = {
 	autoConfig: true,
 	debug: false,
 };
 
-ReactPixel.init('258173202988755', pixelOptions);
-ReactPixel.pageView();
+// ReactPixel.init('258173202988755', pixelOptions);
+// ReactPixel.pageView();
 
 const HomeBlocks = () => {
 	useEffect(() => {

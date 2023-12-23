@@ -1,20 +1,20 @@
 import { useEffect } from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { Button, Icon, Image, Popup } from 'semantic-ui-react';
 import SeoSettings from '../seo/SeoSettings';
-import ReactPixel from 'react-facebook-pixel';
+// import ReactPixel from 'react-facebook-pixel';
 import { certificates } from '../data/certificates';
 import { badges } from '../data/badges';
 
-ReactPixel.pageView();
+// ReactPixel.pageView();
 
 const LearningHistory = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const handleClose = () => {
-		history.push('/about');
+		navigate('/about');
 	};
 
 	useEffect(() => {

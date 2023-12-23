@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { FaWpforms } from 'react-icons/fa';
@@ -9,13 +9,13 @@ import Radio from '@mui/material/Radio';
 import FormGroup from '@mui/material/FormGroup';
 import Checkbox from '@mui/material/Checkbox';
 import RadioGroup from '@mui/material/RadioGroup';
-import * as emailjs from 'emailjs-com';
+import * as emailjs from '@emailjs/browser';
 import SeoSettings from '../seo/SeoSettings';
-import ReactPixel from 'react-facebook-pixel';
+// import ReactPixel from 'react-facebook-pixel';
 import { FormControl, FormControlLabel, FormLabel } from '@mui/material';
 import { amber } from '@mui/material/colors';
 
-ReactPixel.pageView();
+// ReactPixel.pageView();
 
 const emailjsUser = process.env.REACT_APP_EMAIL_USER;
 
@@ -65,12 +65,12 @@ const WebsiteQuestionnaire = () => {
 	const [hostingSelection, setHostingSelection] = useState('hostYes');
 	const [seoSelection, setSeoSelection] = useState('seoYes');
 
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	emailjs.init(emailjsUser);
 
 	const handleClose = () => {
-		history.push('/');
+		navigate('/');
 	};
 
 	const form = useRef();
@@ -149,7 +149,7 @@ const WebsiteQuestionnaire = () => {
 		setValue(initialValues);
 		setTimeout(() => {
 			setEmailSent(false);
-			history.push('/');
+			navigate('/');
 		}, 2000);
 	};
 

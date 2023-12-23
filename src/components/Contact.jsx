@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { HiMailOpen } from 'react-icons/hi';
 import { Button, Icon } from 'semantic-ui-react';
 import TextField from '@mui/material/TextField';
-import * as emailjs from 'emailjs-com';
+import * as emailjs from '@emailjs/browser';
 import SeoSettings from '../seo/SeoSettings';
-import ReactPixel from 'react-facebook-pixel';
+// import ReactPixel from 'react-facebook-pixel';
 import { FaDev, FaGithub, FaLinkedin } from 'react-icons/fa';
 
-ReactPixel.pageView();
+// ReactPixel.pageView();
 
 const emailjsUser = process.env.REACT_APP_EMAIL_USER;
 
@@ -26,12 +26,12 @@ const Contact = () => {
 	const [emailSentError, setEmailSentError] = useState(false);
 	const [disabled, setDisabled] = useState(false);
 
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	emailjs.init(emailjsUser);
 
 	const handleClose = () => {
-		history.push('/');
+		navigate('/');
 	};
 
 	useEffect(() => {

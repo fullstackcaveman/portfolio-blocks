@@ -1,4 +1,4 @@
-import { Switch, Route, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import HomeBlocks from './elements/HomeBlocks';
 import PortfolioPic from './elements/PortfolioPic';
 import About from './About';
@@ -16,7 +16,7 @@ const Home = () => {
 	const [currentScore, setCurrentScore] = useState(0);
 	const location = useLocation();
 
-	const setProject = () => {
+	const renderProjectCard = () => {
 		const projectCall = [];
 
 		// eslint-disable-next-line
@@ -76,19 +76,22 @@ const Home = () => {
 				className='content-area'
 				style={{ overflowX: 'hidden', position: 'relative' }}
 			>
-				<AnimatePresence exitBeforeEnter>
-					<Switch location={location} key={location.pathname}>
-						<Route exact path='/' component={HomeBlocks} />
-						<Route path='/about' component={About} />
-						<Route path='/education-history' component={LearningHistory} />
-						<Route path='/portfolio/:id'>{setProject()}</Route>
-						<Route path='/portfolio' component={Portfolio} />
-						<Route path='/contact' component={Contact} />
+				<AnimatePresence mode='wait'>
+					<Routes location={location} key={location.pathname}>
+						<Route path='/about' element={<About />} />
+						<Route path='/education-history' element={<LearningHistory />} />
+						<Route
+							path='/portfolio/:projectName'
+							element={renderProjectCard()}
+						/>
+						<Route path='/portfolio' element={<Portfolio />} />
+						<Route path='/contact' element={<Contact />} />
 						<Route
 							path='/website-questionnaire'
-							component={WebsiteQuestionnaire}
+							element={<WebsiteQuestionnaire />}
 						/>
-					</Switch>
+						<Route path='/' element={<HomeBlocks />} />
+					</Routes>
 				</AnimatePresence>
 			</div>
 		</main>

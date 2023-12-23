@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { FaDev, FaIdCard } from 'react-icons/fa';
@@ -9,16 +9,16 @@ import { ImFilePdf } from 'react-icons/im';
 import { FaRegEdit } from 'react-icons/fa';
 import { Button } from 'semantic-ui-react';
 import SeoSettings from '../seo/SeoSettings';
-import ReactPixel from 'react-facebook-pixel';
+// import ReactPixel from 'react-facebook-pixel';
 import { Link } from 'react-router-dom';
 
-ReactPixel.pageView();
+// ReactPixel.pageView();
 
 const About = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const handleClose = () => {
-		history.push('/');
+		navigate('/');
 	};
 
 	useEffect(() => {
