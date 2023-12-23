@@ -1,6 +1,6 @@
 import ParticleElements from './ParticleElements';
 
-const PortfolioPic = ({ reset }) => {
+const PortfolioPic = () => {
 	return <ParticleElements />;
 };
 

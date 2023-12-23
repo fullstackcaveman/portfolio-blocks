@@ -80,10 +80,10 @@ const About = () => {
 						PERSONAL INFO
 					</h6>
 					<p className='description'>
-						I'm a Web & Software Developer based in Great Falls, MT. I have a
-						serious passion for UI effects, animations and creating intuitive
-						websites and software. I am comfortable working anywhere in the
-						stack whether it be front-end or back-end or moving between the two.
+						I'm a Web & Software Developer based in Montana. I have a serious
+						passion for UI effects, animations and creating intuitive websites
+						and software. I am comfortable working anywhere in the stack whether
+						it be front-end or back-end or moving between the two.
 					</p>
 
 					<div className='split-section'>
@@ -106,7 +106,7 @@ const About = () => {
 								<a
 									href='https://github.com/fullstackcaveman'
 									target='_blank'
-									rel='noreferrer'
+									rel='nofollow noreferrer noopener'
 								>
 									<BsGithub />
 								</a>
@@ -147,7 +147,7 @@ const About = () => {
 							<a
 								href='https://dev.to/fullstackcaveman'
 								target='_blank'
-								rel='noreferrer'
+								rel='nofollow noreferrer noopener'
 							>
 								<Button size='large' className='blog-btn'>
 									<span className='btn-text'>MY BLOG </span>

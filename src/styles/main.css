@@ -340,6 +340,8 @@ body > div:nth-child(6) > div .ui.button {
 .main-container {
   display: flex;
   height: 100vh;
+  width: 100%;
+  background-color: #000;
 }
 .main-container .portfolio-pic {
   display: flex;
@@ -348,13 +350,13 @@ body > div:nth-child(6) > div .ui.button {
   text-align: center;
   width: 25%;
   margin: 20px 10px 20px 20px;
-  background-color: black;
 }
 .main-container .portfolio-pic:hover {
   cursor: pointer;
 }
 .main-container .portfolio-pic #tsparticles {
   height: 100%;
+  border: 1px solid #ffb400;
 }
 .main-container .content-area {
   display: flex;

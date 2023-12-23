@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
+import { loadFull } from 'tsparticles';
 
 const ParticleElements = () => {
 	const [init, setInit] = useState(false);
@@ -11,8 +12,8 @@ const ParticleElements = () => {
 			// this loads the tsparticles package bundle, it's the easiest method for getting everything ready
 			// starting from v2 you can add only the features you need reducing the bundle size
 			//await loadAll(engine);
-			//await loadFull(engine);
-			await loadSlim(engine);
+			await loadFull(engine);
+			// await loadSlim(engine);
 			//await loadBasic(engine);
 		}).then(() => {
 			setInit(true);
@@ -25,6 +26,7 @@ const ParticleElements = () => {
 
 	const options = useMemo(
 		() => ({
+			fullScreen: false,
 			background: {
 				color: {
 					value: '#000',
@@ -83,79 +85,81 @@ const ParticleElements = () => {
 					value: 1,
 				},
 				shape: {
-					type: 'image',
-					image: [
-						{
-							src: '/images/javascript.png',
-							height: 40,
-							width: 40,
-						},
-						{
-							src: '/images/react.png',
-							height: 60,
-							width: 75,
-						},
-						{
-							src: '/images/node.png',
-							height: 75,
-							width: 80,
-						},
-						{
-							src: '/images/express.png',
-							height: 55,
-							width: 100,
-						},
-						{
-							src: '/images/redux.png',
-							height: 100,
-							width: 100,
-						},
-						{
-							src: '/images/css.png',
-							height: 100,
-							width: 100,
-						},
-						{
-							src: '/images/html5.png',
-							height: 100,
-							width: 90,
-						},
-						{
-							src: '/images/sass.png',
-							height: 100,
-							width: 100,
-						},
-						{
-							src: '/images/git.png',
-							height: 100,
-							width: 100,
-						},
-						{
-							src: '/images/github.png',
-							height: 100,
-							width: 100,
-						},
-						{
-							src: '/images/python.png',
-							height: 100,
-							width: 100,
-						},
-						{
-							src: '/images/mongo.png',
-							height: 100,
-							width: 100,
-						},
-						{
-							src: '/images/postgres.png',
-							height: 100,
-							width: 100,
-						},
-						{
-							src: '/images/fullstackcaveman.png',
-							height: 100,
-							width: 100,
-						},
-					],
+					type: 'images',
+					options: {
+						images: [
+							{
+								src: '/images/javascript.png',
+								height: 40,
+								width: 40,
+							},
+							{
+								src: '/images/react.png',
+								height: 60,
+								width: 75,
+							},
+							{
+								src: '/images/node.png',
+								height: 75,
+								width: 80,
+							},
+							{
+								src: '/images/express.png',
+								height: 55,
+								width: 100,
+							},
+							{
+								src: '/images/redux.png',
+								height: 100,
+								width: 100,
+							},
+							{
+								src: '/images/css.png',
+								height: 100,
+								width: 100,
+							},
+							{
+								src: '/images/html5.png',
+								height: 100,
+								width: 90,
+							},
+							{
+								src: '/images/sass.png',
+								height: 100,
+								width: 100,
+							},
+							{
+								src: '/images/git.png',
+								height: 100,
+								width: 100,
+							},
+							{
+								src: '/images/github.png',
+								height: 100,
+								width: 100,
+							},
+							{
+								src: '/images/python.png',
+								height: 100,
+								width: 100,
+							},
+							{
+								src: '/images/mongo.png',
+								height: 100,
+								width: 100,
+							},
+							{
+								src: '/images/postgres.png',
+								height: 100,
+								width: 100,
+							},
+							{
+								src: '/images/fullstackcaveman.png',
+								height: 100,
+								width: 100,
+							},
+						],
+					},
 				},
 				size: {
 					value: 30,
@@ -166,6 +170,9 @@ const ParticleElements = () => {
 						size_min: 20,
 						sync: true,
 					},
+				},
+				zIndex: {
+					value: 100,
 				},
 			},
 			detectRetina: true,
